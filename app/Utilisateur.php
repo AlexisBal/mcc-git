@@ -10,7 +10,7 @@ class Utilisateur extends Model implements Authenticatable
 {
     use BasicAuthenticatable;
 
-    protected $fillable = ['email', 'nom', 'prenom', 'mot_de_passe', 'test'];
+    protected $fillable = ['email', 'nom', 'prenom', 'mot_de_passe'];
 
     /**
      * Get the password for the user.

@@ -22,7 +22,8 @@
             </div>
             <div class="navbar-end"> 
                 @auth
-                    <a href="/mon-compte" class="navbar-item {{ request()->is('mon-compte') ? 'is-active' : '' }}">Mon compte</a>                  
+                    <a href="/mon-compte" class="navbar-item {{ request()->is('mon-compte') ? 'is-active' : '' }}">Mon compte</a>   
+                    <a href="/mes-informations" class="navbar-item {{ request()->is('mes-informations') ? 'is-active' : '' }}">Modifier mon profil</a>               
                     <a href="/deconnexion" class="navbar-item">Déconnexion</a>
                 @else
                     <a href="/connexion" class="navbar-item {{ request()->is('connexion') ? 'is-active' : '' }}">Connexion</a>                  

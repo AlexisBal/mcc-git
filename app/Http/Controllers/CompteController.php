@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Profil;
 
 class CompteController extends Controller
 {
@@ -34,7 +35,7 @@ class CompteController extends Controller
 			'profil' => ['required', 'string', 'max:255'],
         ]);
 
-        $utilisateur = Utilisateur::create([
+        $profil = Profil::create([
             'niveauetude' => request('niveauetude'),
             'bac' => request('bac'),
             'specialite' => request('specialite'),

@@ -29,7 +29,17 @@ class InscriptionController extends Controller
             'email' => request('email'),
             'mot_de_passe' => bcrypt(request('password')),
         ]);
+      
+        auth()->attempt([
+            'email' => request('email'),
+            'password' => request('password'),
 
-        return "Votre compte a bien été créé. Voici vos identifiants de connexion :" . request('email');
+        ]);
+
+        {
+            flash("Vous êtes maintenant inscrit.")->success();
+
+            return redirect('/mon-compte');
+        }
     }
 }

@@ -13,9 +13,9 @@ Route::group([
 ], function () {
     Route::get('/mon-compte', 'CompteController@accueil');
     Route::get('/deconnexion', 'CompteController@deconnexion');
-    Route::get('/mes-informations', 'CompteController@formulaire');
-    Route::post('/mes-informations', 'CompteController@traitement');
-    Route::post('/modification-mot-de-passe', 'CompteController@modificationMotDePasse');
+    Route::get('/mes-informations', 'InformationsProfilController@formulaire');
+    Route::post('/mes-informations', 'InformationsProfilController@traitement');
+    Route::post('/modification-mot-de-passe', 'ModificationMotDePasseController@modificationMotDePasse');
 });
 
 

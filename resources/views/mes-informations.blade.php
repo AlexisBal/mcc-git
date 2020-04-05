@@ -467,7 +467,7 @@
                 </div>
                 <div class="field">
                     <div class="control">
-                       <button class="button is-link" type="submit">Confirmer les modifications</button>
+                       <button class="button is-link" type="submit">Terminer l'inscription</button>
                     </div>
                 </div>
         </div>  

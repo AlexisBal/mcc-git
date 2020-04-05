@@ -37,9 +37,9 @@ class InscriptionController extends Controller
         ]);
 
         {
-            flash("Vous êtes maintenant inscrit.")->success();
+            flash("Vous êtes maintenant inscrit. Remplissez ce formulaire pour terminer votre inscription !")->success();
 
-            return redirect('/mon-compte');
+            return redirect('/mes-informations');
         }
     }
 }

@@ -39,6 +39,12 @@ class InformationsProfilController extends Controller
             'defaut2' => request('defaut2'),
             'defaut3' => request('defaut3'),
             'profil' => request('profil'),
-		]);
+        ]);
+        
+        {
+            flash("Bravo, votre inscription est terminée !")->success();
+
+            return redirect('/mon-compte');
+        }
 	}
 }

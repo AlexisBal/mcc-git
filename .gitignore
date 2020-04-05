@@ -1,5 +1,9 @@
 git/
-/storage/*.key
-.env.backup
 npm-debug.log
 yarn-error.log
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+Homestead.json
+Homestead.yaml

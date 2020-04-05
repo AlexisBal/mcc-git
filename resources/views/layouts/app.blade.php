@@ -19,13 +19,14 @@
           <div class="navbar-menu">
             <div class="navbar-start">
                 @auth
-                    <a href="/mon-compte" class="navbar-item {{ request()->is('mon-compte') ? 'is-active' : '' }}">Mon compte</a>   
+                    <a href="/mon-compte" class="navbar-item">Accueil</a>   
                 @else            
                     <a href="/" class="navbar-item">Accueil</a>
                 @endauth                
             </div>
             <div class="navbar-end"> 
                 @auth
+                    <a href="/profil" class="navbar-item {{ request()->is('profil') ? 'is-active' : '' }}">Mon profil</a>
                     <a href="/mes-informations" class="navbar-item {{ request()->is('mes-informations') ? 'is-active' : '' }}">Modifier mon profil</a>               
                     <a href="/deconnexion" class="navbar-item">Déconnexion</a>
                 @else

@@ -5,7 +5,17 @@
 @section('content')
          
     <div class="container">
-       <label class="label" id="nom">Adresse email :</label>
+       <label class="label">Prenom :</label>
+        {{ $utilisateurs->prenom }}
+    </div>
+   
+    <div class="container">
+       <label class="label">Nom :</label>
+        {{ $utilisateurs->nom }}
+    </div>
+
+    <div class="container">
+       <label class="label">Adresse email :</label>
         {{ $utilisateurs->email }}
     </div>
 

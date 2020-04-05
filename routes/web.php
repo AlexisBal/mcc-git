@@ -12,6 +12,7 @@ Route::group([
     'middleware' => 'App\Http\Middleware\Auth',
 ], function () {
     Route::get('/mon-compte', 'CompteController@accueil');
+    Route::get('/profil', 'UtilisateursController@liste');
     Route::get('/deconnexion', 'CompteController@deconnexion');
     Route::get('/mes-informations', 'InformationsProfilController@formulaire');
     Route::post('/mes-informations', 'InformationsProfilController@traitement');

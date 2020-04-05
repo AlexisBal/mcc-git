@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Utilisateur;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Profil;
 
 class CompteController extends Controller
 {

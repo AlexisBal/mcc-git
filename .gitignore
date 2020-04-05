@@ -2,7 +2,5 @@ git/
 npm-debug.log
 yarn-error.log
 /node_modules
-/public/hot
-/public/storage
 Homestead.json
 Homestead.yaml

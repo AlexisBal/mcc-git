@@ -15,7 +15,6 @@ class InformationsProfilController extends Controller
     {
         request()->validate([
 			'niveauetude' => ['required', 'string', 'max:255'],
-			'bac' => ['required', 'string', 'max:255'],
 			'specialite' => ['required', 'string', 'max:255'],
 			'qualite1' => ['required', 'string', 'max:255'],
 			'qualite2' => ['required', 'string', 'max:255'],
@@ -30,7 +29,6 @@ class InformationsProfilController extends Controller
 
         $profil = Profil::create([
             'niveauetude' => request('niveauetude'),
-            'bac' => request('bac'),
             'specialite' => request('specialite'),
             'qualite1' => request('qualite1'),
             'qualite2' => request('qualite2'),

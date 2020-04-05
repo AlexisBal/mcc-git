@@ -10,7 +10,7 @@ class Profil extends Model implements Authenticatable
 {
     use BasicAuthenticatable;
 
-    protected $fillable = ['niveauetude', 'bac', 'specialite', 'qualite1', 'qualite2', 'qualite3', 'qualite4', 'qualite5', 'defaut1', 'defaut2', 'defaut3','profil'];
+    protected $fillable = ['niveauetude', 'specialite', 'qualite1', 'qualite2', 'qualite3', 'qualite4', 'qualite5', 'defaut1', 'defaut2', 'defaut3','profil'];
 
     /**
      * Get the password for the user.

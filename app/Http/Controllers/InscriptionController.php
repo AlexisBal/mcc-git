@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Utilisateur;
+use Illuminate\Support\Facades\Hash;
 
 class InscriptionController extends Controller
 {
@@ -27,7 +28,7 @@ class InscriptionController extends Controller
             'nom' => request('nom'),
             'prenom' => request('prenom'),
             'email' => request('email'),
-            'mot_de_passe' => bcrypt(request('password')),
+            'mot_de_passe' => Hash::make(request('password')),
         ]);
       
         auth()->attempt([

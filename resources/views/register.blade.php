@@ -7,9 +7,8 @@
         {{ csrf_field() }}
 
         <div class="field">
-            <label class="label" id="nom">Nom</label>
             <div class="control">
-                <input class="input" type="text" name="nom">
+                <input class="input is-medium" type="text" name="nom" value="{{ old('nom') }}" placeholder="Nom">
             </div>
             @if($errors->has('nom'))
                 <p class="help is-danger">{{ $errors->first('nom') }}</p>
@@ -17,9 +16,8 @@
         </div>
 
         <div class="field">
-            <label class="label" id="prenom">Prénom</label>
             <div class="control">
-                <input class="input" type="text" name="prenom">
+                <input class="input is-medium" type="text" name="prenom" value="{{ old('prenom') }}" placeholder="Prénom">
             </div>
             @if($errors->has('prenom'))
                 <p class="help is-danger">{{ $errors->first('prenom') }}</p>
@@ -27,30 +25,39 @@
         </div>  
         
         <div class="field">
-          <label class="label" id="mail">Adresse e-mail</label>
-          <div class="control">
-            <input class="input" type="email" name="email" vvalue="{{ old('email') }}">
-          </div>
-          @if($errors->has('email'))
-              <p class="help is-danger">{{ $errors->first('email') }}</p>
-          @endif
+            <p class="control has-icons-left has-icons-right"> 
+                <input class="input is-medium" type="email" name="email" value="{{ old('email') }}" placeholder="Adresse email">
+                <span class="icon is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-right">
+                  <i class="fas fa-check"></i>
+                </span>
+            </p>
+            @if($errors->has('email'))
+                <p class="help is-danger">{{ $errors->first('email') }}</p>
+            @endif
         </div>
 
         <div class="field">
-            <label class="label" id="mdp">Mot de passe</label>
-            <div class="control">
-                <input class="input" type="password" name="password">
-            </div>
+            <p class="control has-icons-left">
+                <input class="input is-medium" type="password" id="mdp" name="password" placeholder="Mot de passe">
+                <span class="icon is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+            </p>
             @if($errors->has('password'))
                 <p class="help is-danger">{{ $errors->first('password') }}</p>
             @endif
         </div>
 
         <div class="field">
-            <label class="label" id="mdp2">Confirmation du mot de passe</label>
-            <div class="control">
-                <input class="input" type="password" name="password_confirmation">
-            </div>
+            <p class="control has-icons-left">
+                <input class="input is-medium" type="password" id="mdp2" name="password_confirmation" placeholder="Confirmation du mot de passe">
+                <span class="icon is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+            </p>
             @if($errors->has('password_confirmation'))
                 <p class="help is-danger">{{ $errors->first('password_confirmation') }}</p>
             @endif

@@ -28,6 +28,6 @@ class Utilisateur extends Model implements Authenticatable
      */
     public function getRememberTokenName()
     {
-        return '';
+        return 'remember_token';
     }
 }

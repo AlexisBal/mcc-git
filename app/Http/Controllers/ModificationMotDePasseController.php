@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class ModificationMotDePasseController extends Controller
 {
@@ -14,7 +15,7 @@ class ModificationMotDePasseController extends Controller
 	    ]);
 
 	    auth()->user()->update([
-		    'mot_de_passe' => bcrypt(request('password')),
+		    'mot_de_passe' => Hash::make(request('password')),
 		]);
 
 		flash("Votre mot de passe a bien été mis à jour.")->success();

@@ -18,13 +18,14 @@ class ConnexionController extends Controller
 	    request()->validate([
 	        'email' => ['required', 'email'],
 	        'password' => ['required'],
-	    ]);
+		]);
+		
+		$remember = request('remember') ? true : false; 
 
 	    $resultat = auth()->attempt([
 	    	'email' => request('email'),
 	    	'password' => request('password'),
-
-	    ]);
+		], $remember);
 
 		if ($resultat) {
 			flash("Vous êtes maintenant connecté.")->success();

@@ -33,9 +33,24 @@
             @endif
         </div>
 
-        <div class="field">
-            <div class="control">
-                <button class="button is-link" type="submit">Se connecter</button>
+        <div class="field-body">
+            <div class="field">
+                <p class="control">
+                    <label class="checkbox">
+                        <input type="checkbox"
+                                name="remember" {{ old('remember') ? 'checked' : '' }}> Se souvenir de moi
+                    </label>
+                </p>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-body">
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button type="submit" class="button is-link">Se connecter</button>
+                    </div>
+                </div>
             </div>
         </div>
     </form>

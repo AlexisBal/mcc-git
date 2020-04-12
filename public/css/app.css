@@ -5506,8 +5506,16 @@ a.badge-dark.focus {
 }
 
 .alert {
+  position: absolute;
+  font-size: 1.6em;
+  left: 40%;
+  top: 100px;
+  height: 40px 20px;
+  padding: 10px 15px;
   border: solid;
   border-width: 2px 2px 2px 2px;
+  border-radius: 10px;
+  ;
 }
 
 .alert-heading {
@@ -5571,7 +5579,9 @@ a.badge-dark.focus {
 }
 
 .alert-success .alert-link {
-  color: #123c24;
+  color: #1d643b;
+  background-color: #d7f3e3;
+  border-color: #c7eed8
 }
 
 .alert-info {
@@ -5613,7 +5623,9 @@ a.badge-dark.focus {
 }
 
 .alert-danger .alert-link {
-  color: #4c110f;
+  color: #761b18;
+  background-color: #f9d6d5;
+  border-color: #f7c6c5;
 }
 
 .alert-light {

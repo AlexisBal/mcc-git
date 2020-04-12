@@ -25,7 +25,6 @@ class CreateProfilsTable extends Migration
             $table->string('defaut1');
             $table->string('defaut2');
             $table->string('defaut3');
-            $table->string('profil');
             $table->rememberToken();
             $table->timestamps();
         });

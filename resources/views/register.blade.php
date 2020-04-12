@@ -3,74 +3,93 @@
 @section('title', 'Inscription')
 
 @section('content')
-    <form action="/inscription" method="post">
-        {{ csrf_field() }}
 
-        <div class="field">
-            <div class="control">
-                <input class="input is-medium" type="text" name="nom" value="{{ old('nom') }}" placeholder="Nom">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Inscription') }}</div>
+
+                <div class="card-body">
+                    <form method="POST" action="/inscription">
+                        @csrf
+
+                        <div class="form-group row">
+                            <label for="nom" class="col-md-4 col-form-label text-md-right">{{ __('Nom') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="nom" type="text" class="form-control @error('nom') is-invalid @enderror" name="nom" value="{{ old('nom') }}" required autocomplete="nom" autofocus>
+
+                                @error('nom')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="prenom" class="col-md-4 col-form-label text-md-right">{{ __('Prénom') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="prenom" type="text" class="form-control @error('prenom') is-invalid @enderror" name="prenom" value="{{ old('prenom') }}" required autocomplete="prenom" autofocus>
+
+                                @error('prenom')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Adresse email') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="mdp" class="col-md-4 col-form-label text-md-right">{{ __('Mot de passe') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="mdp" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="mdp2" class="col-md-4 col-form-label text-md-right">{{ __('Confirmation du mot de passe') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="mdp2" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">M'inscrire</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            @if($errors->has('nom'))
-                <p class="help is-danger">{{ $errors->first('nom') }}</p>
-            @endif
         </div>
-
-        <div class="field">
-            <div class="control">
-                <input class="input is-medium" type="text" name="prenom" value="{{ old('prenom') }}" placeholder="Prénom">
-            </div>
-            @if($errors->has('prenom'))
-                <p class="help is-danger">{{ $errors->first('prenom') }}</p>
-            @endif
-        </div>  
-        
-        <div class="field">
-            <p class="control has-icons-left has-icons-right"> 
-                <input class="input is-medium" type="email" name="email" value="{{ old('email') }}" placeholder="Adresse email">
-                <span class="icon is-left">
-                  <i class="fas fa-envelope"></i>
-                </span>
-                <span class="icon is-right">
-                  <i class="fas fa-check"></i>
-                </span>
-            </p>
-            @if($errors->has('email'))
-                <p class="help is-danger">{{ $errors->first('email') }}</p>
-            @endif
-        </div>
-
-        <div class="field">
-            <p class="control has-icons-left">
-                <input class="input is-medium" type="password" id="mdp" name="password" placeholder="Mot de passe">
-                <span class="icon is-left">
-                  <i class="fas fa-lock"></i>
-                </span>
-            </p>
-            @if($errors->has('password'))
-                <p class="help is-danger">{{ $errors->first('password') }}</p>
-            @endif
-        </div>
-
-        <div class="field">
-            <p class="control has-icons-left">
-                <input class="input is-medium" type="password" id="mdp2" name="password_confirmation" placeholder="Confirmation du mot de passe">
-                <span class="icon is-left">
-                  <i class="fas fa-lock"></i>
-                </span>
-            </p>
-            @if($errors->has('password_confirmation'))
-                <p class="help is-danger">{{ $errors->first('password_confirmation') }}</p>
-            @endif
-        </div>
-
-        <div class="field">
-            <div class="control">
-                <button class="button is-link" type="submit">M'inscrire</button>
-            </div>
-        </div>
-    </form>
+    </div>
+</div>
 @endsection
 
-
-
-
+ 
+           

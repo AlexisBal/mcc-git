@@ -1,5 +1,4 @@
 @foreach (session('flash_notification', collect())->toArray() as $message)
-  <section class="section">
     @if ($message['overlay'])
         @include('flash::modal', [
             'modalClass' => 'flash-modal',
@@ -7,8 +6,8 @@
             'body'       => $message['message']
         ])
     @else
-        <div class="message
-                    is-{{ $message['level'] }}
+        <div class="alert
+                    alert-{{ $message['level'] }}
                     {{ $message['important'] ? 'alert-important' : '' }}"
                     role="alert"
         >
@@ -19,12 +18,10 @@
                         aria-hidden="true"
                 >&times;</button>
             @endif
-            <div class="message-body">
-                {!! $message['message'] !!}
-            </div>
+
+            {!! $message['message'] !!}
         </div>
     @endif
-  </section>
 @endforeach
 
 {{ session()->forget('flash_notification') }}

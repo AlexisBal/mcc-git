@@ -3,7 +3,7 @@
 @section('title', 'TEST')
 
 @section('content')
-         
+
     <div class="container">
        <label class="label">Nom :</label>
         {{ $utilisateurs->nom }}

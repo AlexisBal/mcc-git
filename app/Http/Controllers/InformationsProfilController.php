@@ -24,7 +24,6 @@ class InformationsProfilController extends Controller
 			'defaut1' => ['required', 'string', 'max:255'],
 			'defaut2' => ['required', 'string', 'max:255'],
 			'defaut3' => ['required', 'string', 'max:255'],
-			'profil' => ['required', 'string', 'max:255'],
         ]);
 
         $profil = Profil::create([
@@ -38,7 +37,6 @@ class InformationsProfilController extends Controller
             'defaut1' => request('defaut1'),
             'defaut2' => request('defaut2'),
             'defaut3' => request('defaut3'),
-            'profil' => request('profil'),
         ]);
         
         {

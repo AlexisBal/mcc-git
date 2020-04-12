@@ -17,14 +17,11 @@ class VerificationFormulaireComplete
      */
     public function handle($request, Closure $next)
     {
-        $response = $next($request);
-
         if (Profil::where('id', '=',Auth::user()->id)->doesntExist()) {
             flash("Vous devez terminer l'inscription !")->error();
 
             return redirect('/mes-informations');
         }
-
-        return $response;
+        return $next($request);
     }
 }

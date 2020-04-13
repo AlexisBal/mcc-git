@@ -3,10 +3,14 @@
 @section('title', 'Accueil')
 
 @section('content')
-    <div class="section">
-        <h1 class="title is-1">Bienvenue sur My Course Choice !</h1>
-        <h2 class="title is-2">L'outil qui te permet de trouver l'école de tes rêves.</h2>
-        <h3 class="title is-3">Mais comment cela fonctionne ?</h3>
+    
+<div class="jumbotron">
+  <h1 class="display-4">Bienvenue sur My Course Choice !</h1>
+  <p class="lead">L'outil qui te permet de trouver l'école de tes rêves.</p>
+  <hr class="my-4">
+  <p>Mais comment cela fonctionne ?</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">En apprendre plus</a>
+</div>
 
     
 @endsection

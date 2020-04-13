@@ -21,21 +21,23 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #c8cacc;">
             <div class="container">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         @auth
-                            <a href="/mon-compte" class="nav-link">Accueil</a>   
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/mon-compte">Accueil <span class="sr-only">(current)</span></a>
+                        </li>
                         @else            
-                            <a href="/" class="nav-link">Accueil</a>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Accueil <span class="sr-only">(current)</span></a>
+                        </li>
                         @endauth  
-
                     </ul>
 
                     <!-- Right Side Of Navbar -->

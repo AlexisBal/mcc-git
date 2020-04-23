@@ -13,7 +13,7 @@ class UtilisateursController extends Controller
         $utilisateurs = Utilisateur::where('id', '=',Auth::user()->id)->first();
         $profils = Profil::where('id', '=',Auth::user()->id)->first();
 
-        return view('profil', [
+        return view('affiche_profil', [
             'utilisateurs' => $utilisateurs,
             'profils' => $profils,
 

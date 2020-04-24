@@ -38,7 +38,7 @@ class InformationsProfilController extends Controller
             'defaut2' => request('defaut2'),
             'defaut3' => request('defaut3'),
         ]);
-        
+
         {
             flash("Bravo, votre inscription est terminée !")->success();
 

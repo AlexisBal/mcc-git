@@ -7,6 +7,7 @@
         @csrf
          
         <div class="form-group">
+         <div class="col-auto">
           <label for="niveauetude">Niveau d'études</label>
           <select class="form-control @error('niveauetude') is-invalid @enderror" id="niveauetude" name="niveauetude">
               <option>{{ old('niveauetude') }}</option>
@@ -19,9 +20,11 @@
                   <strong>{{ $message }}</strong>
               </span>
           @enderror
+         </div>
         </div>
         
         <div class="form-group">
+         <div class="col-auto">
           <label for="specialite">Spécialités choisies</label>
           <select class="form-control @error('specialite') is-invalid @enderror" id="specialite" name="specialite">
               <option>{{ old('specialite') }}</option>
@@ -43,9 +46,11 @@
                   <strong>{{ $message }}</strong>
               </span>
           @enderror
+         </div>
         </div>
 
         <div class="form-group">
+         <div class="col-auto">
           <label for="qualite1">Qualité 1</label>
           <select class="form-control @error('qualite1') is-invalid @enderror" id="qualite1" name="qualite1">
               <option>{{ old('qualite1') }}</option>
@@ -93,6 +98,7 @@
         </div>
 
         <div class="form-group">
+         <div class="col-auto">
           <label for="qualite2">Qualité 2</label>
           <select class="form-control @error('qualite2') is-invalid @enderror" id="qualite2" name="qualite2">
               <option>{{ old('qualite2') }}</option>
@@ -137,9 +143,11 @@
                   <strong>{{ $message }}</strong>
               </span>
           @enderror
+         </div>
         </div>
 
         <div class="form-group">
+         <div class="col-auto">
           <label for="qualite3">Qualité 3</label>
           <select class="form-control @error('qualite3') is-invalid @enderror" id="qualite3" name="qualite3">
               <option>{{ old('qualite3') }}</option>
@@ -184,9 +192,11 @@
                   <strong>{{ $message }}</strong>
               </span>
           @enderror
+         </div>
         </div>
 
         <div class="form-group">
+         <div class="col-auto">
           <label for="qualite4">Qualité 4</label>
           <select class="form-control @error('qualite4') is-invalid @enderror" id="qualite4" name="qualite4">
               <option>{{ old('qualite4') }}</option>
@@ -231,9 +241,11 @@
                   <strong>{{ $message }}</strong>
               </span>
           @enderror
+         </div>
         </div>
 
         <div class="form-group">
+         <div class="col-auto">
           <label for="qualite5">Qualité 5</label>
           <select class="form-control @error('qualite5') is-invalid @enderror" id="qualite5" name="qualite5">
               <option>{{ old('qualite5') }}</option>
@@ -278,9 +290,11 @@
                   <strong>{{ $message }}</strong>
               </span>
           @enderror
+         </div>
         </div>
 
         <div class="form-group">
+         <div class="col-auto">
           <label for="defaut1">Défaut 1</label>
           <select class="form-control @error('defaut1') is-invalid @enderror" id="defaut1" name="defaut1">
               <option>{{ old('defaut1') }}</option>
@@ -316,9 +330,11 @@
                   <strong>{{ $message }}</strong>
               </span>
           @enderror
+         </div>
         </div>
 
         <div class="form-group">
+         <div class="col-auto">
           <label for="defaut2">Défaut 2</label>
           <select class="form-control @error('defaut2') is-invalid @enderror" value="{{ old('defaut2') }}" id="defaut2" name="defaut2">
               <option>{{ old('defaut2') }}</option>
@@ -354,9 +370,11 @@
                   <strong>{{ $message }}</strong>
               </span>
           @enderror
+         </div>
         </div>
 
         <div class="form-group">
+         <div class="col-auto">
           <label for="defaut3">Défaut 3</label>
           <select class="form-control @error('defaut3') is-invalid @enderror" id="defaut3" name="defaut3">
               <option>{{ old('defaut3') }}</option>
@@ -392,12 +410,13 @@
                   <strong>{{ $message }}</strong>
               </span>
           @enderror
+         </div>
         </div>
         
-        <div class="form-group row mb-0">
+         <div class="col-auto">
             <div class="col-md-6 offset-md-4">
                 <button type="submit" class="btn btn-primary">Terminer l'inscription</button>
             </div>
-        </div> 
+         </div>
     </form>
 @endsection      

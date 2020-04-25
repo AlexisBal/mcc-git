@@ -10,7 +10,7 @@
          <div class="col-auto">
           <label for="niveauetude">Niveau d'études</label>
           <select class="form-control @error('niveauetude') is-invalid @enderror" id="niveauetude" name="niveauetude">
-              <option>{{ old('niveauetude') }}</option>
+              <option value="{{ old('niveauetude') }}">{{ $niveauetude }}</option>
               <option value="seconde">Seconde</option>
               <option value="premiere">Première</option>
               <option value="terminale">Terminale</option>
@@ -27,7 +27,7 @@
          <div class="col-auto">
           <label for="specialite">Spécialités choisies</label>
           <select class="form-control @error('specialite') is-invalid @enderror" id="specialite" name="specialite">
-              <option>{{ old('specialite') }}</option>
+              <option value="{{ old('specialite') }}">{{ $specialite }}</option>
               <option value="m_es_h">MATHS-SES-HUMANITES</option>
               <option value="m_s_h">MATHS-SVT-HUMANITES</option>
               <option value="m_p_sp">MATHS-PHYS-SPO</option>

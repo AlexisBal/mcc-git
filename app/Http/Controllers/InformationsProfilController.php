@@ -3,16 +3,84 @@
 namespace App\Http\Controllers;
 
 use App\Profil;
+use Illuminate\Http\Request;
+use App\Http\Requests;
 
 class InformationsProfilController extends Controller
 {
     public function formulaire()
-    {
-		return view('mes-informations');
+    {   
+        $nvetude = request()->old('niveauetude');
+        $spe = request()->old('specialite');
+
+        if ($nvetude == "premiere") {
+            $nvetude = "Première";
+        }
+
+        if ($nvetude == "terminale") {
+            $nvetude = "Terminale";
+        }
+
+        if ($nvetude == "seconde") {
+            $nvetude = "Seconde";
+        }
+
+        if ($spe == "m_es_h") {
+            $spe = "MATHS-SES-HUMANITES";
+        }
+
+        if ($spe == "m_s_h") {
+            $spe = "MATHS-SVT-HUMANITES";
+        }
+        
+        if ($spe == "m_p_sp") {
+            $spe = "MATHS-PHYS-SPO";
+        }
+
+        if ($spe == "m_es_s") {
+            $spe = "MATHS-SES-SVT";
+        }
+
+        if ($spe == "m_es_p") {
+            $spe = "MATHS-SES-PHYS";
+        }
+
+        if ($spe == "m_p_lv") {
+            $spe = "MATHS-PHYS-LV et CULT ANGLAIS";
+        }
+
+        if ($spe == "m_es_lv") {
+            $spe = "MATHS-PHYS-LV et CULT ANGLAIS";
+        }
+
+        if ($spe == "m_es_sp") {
+            $spe = "MATHS-SES-SPO";
+        }
+
+        if ($spe == "m_p_si") {
+            $spe = "MATHS-PHYS-SI";
+        }
+
+        if ($spe == "m_p_s") {
+            $spe = "MATHS-PHYS-SVT";
+        }
+
+        if ($spe == "sp_es_lv") {
+            $spe = "SPO-SES-LV et CULT ANGLAIS";
+        }
+
+        if ($spe == "sp_h_es") {
+            $spe = "SPO-HUMANITES-SES";
+        }
+        
+		return view('mes-informations',[
+            'niveauetude' => $nvetude,
+            'specialite' => $spe,
+        ]);
 	}
 
 	public function traitement()
-    {
+    {   
         request()->validate([
 			'niveauetude' => ['required', 'string', 'max:255'],
 			'specialite' => ['required', 'string', 'max:255'],
@@ -25,7 +93,7 @@ class InformationsProfilController extends Controller
 			'defaut2' => ['required', 'string', 'max:255'],
 			'defaut3' => ['required', 'string', 'max:255'],
         ]);
-
+        
         $profil = Profil::create([
             'niveauetude' => request('niveauetude'),
             'specialite' => request('specialite'),

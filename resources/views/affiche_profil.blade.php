@@ -125,12 +125,12 @@
     <div class="form-row align-items-center">
       <div class="col-auto">
             <div class="form-check mb-2">
-                <button type="submit" class="btn btn-primary" href="">Modifier mes informations</button>
+                <button type="submit" class="btn btn-primary" href="/">Modifier mes informations</button>
             </div>
       </div>
       <div class="col-auto">
             <div class="form-check mb-2">
-                <button type="submit" class="btn btn-primary" href="#">Retour à l'accueil</button>
+                 <a href="/mon-compte" class="btn btn-primary" role="button">Retour à l'accueil</a>
             </div>
       </div>
     </div>

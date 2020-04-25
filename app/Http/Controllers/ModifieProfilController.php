@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Utilisateur;
 use App\Profil;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
-class InformationsProfilController extends Controller
+class ModifieProfilController extends Controller
 {
-    public function formulaire()
+    public function afficher()
     {   
-        $spe = request()->old('specialite');
+        $utilisateurs = Utilisateur::where('id', '=',Auth::user()->id)->first();
+        $profils = Profil::where('id', '=',Auth::user()->id)->first();
+        $spe = $profils->specialite;
 
         if ($spe == "m_es_h") {
             $spe = "MATHS-SES-HUMANITES";
@@ -60,12 +64,14 @@ class InformationsProfilController extends Controller
             $spe = "SPO-HUMANITES-SES";
         }
         
-		return view('mes-informations',[
+		return view('modifie_profil',[
+            'utilisateurs' => $utilisateurs,
+            'profils' => $profils,
             'specialite' => $spe,
         ]);
 	}
 
-	public function traitement()
+	public function modifier()
     {   
         request()->validate([
 			'niveauetude' => ['required', 'string', 'max:255'],
@@ -80,7 +86,7 @@ class InformationsProfilController extends Controller
 			'defaut3' => ['required', 'string', 'max:255'],
         ]);
         
-        $profil = Profil::create([
+        $profilmodifie = Profil::where('id', '=',Auth::user()->id)->update([
             'niveauetude' => request('niveauetude'),
             'specialite' => request('specialite'),
             'qualite1' => request('qualite1'),
@@ -94,9 +100,9 @@ class InformationsProfilController extends Controller
         ]);
 
         {
-            flash("Bravo, votre inscription est terminée !")->success();
+            flash("Vos modifications ont été prises en compte !")->success();
 
-            return redirect('/mon-compte');
+            return redirect('/profil');
         }
 	}
 }

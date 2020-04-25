@@ -10,20 +10,7 @@ class InformationsProfilController extends Controller
 {
     public function formulaire()
     {   
-        $nvetude = request()->old('niveauetude');
         $spe = request()->old('specialite');
-
-        if ($nvetude == "premiere") {
-            $nvetude = "Première";
-        }
-
-        if ($nvetude == "terminale") {
-            $nvetude = "Terminale";
-        }
-
-        if ($nvetude == "seconde") {
-            $nvetude = "Seconde";
-        }
 
         if ($spe == "m_es_h") {
             $spe = "MATHS-SES-HUMANITES";
@@ -74,7 +61,6 @@ class InformationsProfilController extends Controller
         }
         
 		return view('mes-informations',[
-            'niveauetude' => $nvetude,
             'specialite' => $spe,
         ]);
 	}

@@ -10,10 +10,10 @@
          <div class="col-auto">
           <label for="niveauetude">Niveau d'études</label>
           <select class="form-control @error('niveauetude') is-invalid @enderror" id="niveauetude" name="niveauetude">
-              <option value="{{ old('niveauetude') }}">{{ $niveauetude }}</option>
-              <option value="seconde">Seconde</option>
-              <option value="premiere">Première</option>
-              <option value="terminale">Terminale</option>
+              <option value="{{ old('niveauetude') }}">{{ old('niveauetude') }}</option>
+              <option value="Seconde">Seconde</option>
+              <option value="Premiere">Première</option>
+              <option value="Terminale">Terminale</option>
           </select>
           @error('niveauetude')
               <span class="invalid-feedback" role="alert">
@@ -53,7 +53,7 @@
          <div class="col-auto">
           <label for="qualite1">Qualité 1</label>
           <select class="form-control @error('qualite1') is-invalid @enderror" id="qualite1" name="qualite1">
-              <option>{{ old('qualite1') }}</option>
+              <option value="{{ old('qualite1') }}">{{ old('qualite1') }}</option>
               <option value="Analytique">Analytique</option>
               <option value="Ambitieux">Ambitieux</option>
               <option value="Astucieux">Astucieux</option>
@@ -101,7 +101,7 @@
          <div class="col-auto">
           <label for="qualite2">Qualité 2</label>
           <select class="form-control @error('qualite2') is-invalid @enderror" id="qualite2" name="qualite2">
-              <option>{{ old('qualite2') }}</option>
+              <option value="{{ old('qualite2') }}">{{ old('qualite2') }}</option>
               <option value="Analytique">Analytique</option>
               <option value="Ambitieux">Ambitieux</option>
               <option value="Astucieux">Astucieux</option>
@@ -150,7 +150,7 @@
          <div class="col-auto">
           <label for="qualite3">Qualité 3</label>
           <select class="form-control @error('qualite3') is-invalid @enderror" id="qualite3" name="qualite3">
-              <option>{{ old('qualite3') }}</option>
+              <option value="{{ old('qualite3') }}">{{ old('qualite3') }}</option>
               <option value="Analytique">Analytique</option>
               <option value="Ambitieux">Ambitieux</option>
               <option value="Astucieux">Astucieux</option>
@@ -199,7 +199,7 @@
          <div class="col-auto">
           <label for="qualite4">Qualité 4</label>
           <select class="form-control @error('qualite4') is-invalid @enderror" id="qualite4" name="qualite4">
-              <option>{{ old('qualite4') }}</option>
+              <option value="{{ old('qualite4') }}">{{ old('qualite4') }}</option>
               <option value="Analytique">Analytique</option>
               <option value="Ambitieux">Ambitieux</option>
               <option value="Astucieux">Astucieux</option>
@@ -248,7 +248,7 @@
          <div class="col-auto">
           <label for="qualite5">Qualité 5</label>
           <select class="form-control @error('qualite5') is-invalid @enderror" id="qualite5" name="qualite5">
-              <option>{{ old('qualite5') }}</option>
+              <option value="{{ old('qualite5') }}">{{ old('qualite5') }}</option>
               <option value="Analytique">Analytique</option>
               <option value="Ambitieux">Ambitieux</option>
               <option value="Astucieux">Astucieux</option>
@@ -297,7 +297,7 @@
          <div class="col-auto">
           <label for="defaut1">Défaut 1</label>
           <select class="form-control @error('defaut1') is-invalid @enderror" id="defaut1" name="defaut1">
-              <option>{{ old('defaut1') }}</option>
+              <option value="{{ old('defaut1') }}">{{ old('defaut1') }}</option>
               <option value="Agressif">Agressif</option>
               <option value="Anxieux">Anxieux</option>
               <option value="Astucieux">Astucieux</option>
@@ -337,7 +337,7 @@
          <div class="col-auto">
           <label for="defaut2">Défaut 2</label>
           <select class="form-control @error('defaut2') is-invalid @enderror" value="{{ old('defaut2') }}" id="defaut2" name="defaut2">
-              <option>{{ old('defaut2') }}</option>
+              <option value="{{ old('defaut2') }}">{{ old('defaut2') }}</option>
               <option value="Agressif">Agressif</option>
               <option value="Anxieux">Anxieux</option>
               <option value="Astucieux">Astucieux</option>
@@ -377,7 +377,7 @@
          <div class="col-auto">
           <label for="defaut3">Défaut 3</label>
           <select class="form-control @error('defaut3') is-invalid @enderror" id="defaut3" name="defaut3">
-              <option>{{ old('defaut3') }}</option>
+              <option value="{{ old('defaut3') }}">{{ old('defaut3') }}</option>
               <option value="Agressif">Agressif</option>
               <option value="Anxieux">Anxieux</option>
               <option value="Astucieux">Astucieux</option>

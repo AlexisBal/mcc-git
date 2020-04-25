@@ -45,7 +45,7 @@
         <div class="col-auto">
           <label class="label">Spécialités choisies</label>
           <select class="form-control" disabled>
-              <option>{{ $profils->specialite }}</option>
+              <option>{{ $specialite }}</option>
           </select>
         </div>
     </div>

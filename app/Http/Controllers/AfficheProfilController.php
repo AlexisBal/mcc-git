@@ -11,7 +11,7 @@ class AfficheProfilController extends Controller
     public function liste()
     {
         $utilisateurs = Utilisateur::where('id', '=',Auth::user()->id)->first();
-        $profils = Profil::where('id', '=',Auth::user()->id)->first();
+        $profils = Profil::where('user_id', '=',Auth::user()->id)->first();
         $spe = $profils->specialite;
        
         if ($spe == "m_es_h") {

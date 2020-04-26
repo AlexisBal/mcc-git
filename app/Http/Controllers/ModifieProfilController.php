@@ -13,8 +13,9 @@ class ModifieProfilController extends Controller
     public function afficher()
     {   
         $utilisateurs = Utilisateur::where('id', '=',Auth::user()->id)->first();
-        $profils = Profil::where('id', '=',Auth::user()->id)->first();
+        $profils = Profil::where('user_id', '=',Auth::user()->id)->first();
         $spe = $profils->specialite;
+        
 
         if ($spe == "m_es_h") {
             $spe = "MATHS-SES-HUMANITES";
@@ -85,8 +86,11 @@ class ModifieProfilController extends Controller
 			'defaut2' => ['required', 'string', 'max:255'],
 			'defaut3' => ['required', 'string', 'max:255'],
         ]);
-        
-        $profilmodifie = Profil::where('id', '=',Auth::user()->id)->update([
+
+        $utilisateurs = Utilisateur::where('id', '=',Auth::user()->id)->first();
+        $id = $utilisateurs->id;
+        $profilmodifie = Profil::where('user_id', '=',Auth::user()->id)->update([
+            'user_id' => $id,
             'niveauetude' => request('niveauetude'),
             'specialite' => request('specialite'),
             'qualite1' => request('qualite1'),

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Profil;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Utilisateur;
+use Illuminate\Support\Facades\Auth;
 
 class InformationsProfilController extends Controller
 {
@@ -79,8 +81,11 @@ class InformationsProfilController extends Controller
 			'defaut2' => ['required', 'string', 'max:255'],
 			'defaut3' => ['required', 'string', 'max:255'],
         ]);
-        
+        $utilisateurs = Utilisateur::where('id', '=',Auth::user()->id)->first();
+        $id = $utilisateurs->id;
+
         $profil = Profil::create([
+            'user_id' => $id,
             'niveauetude' => request('niveauetude'),
             'specialite' => request('specialite'),
             'qualite1' => request('qualite1'),

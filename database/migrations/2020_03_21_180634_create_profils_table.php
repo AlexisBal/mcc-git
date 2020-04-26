@@ -14,7 +14,7 @@ class CreateProfilsTable extends Migration
     public function up()
     {
         Schema::create('profils', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->foreignId('user_id');
             $table->string('niveauetude');
             $table->string('specialite');
             $table->string('qualite1');
@@ -25,7 +25,6 @@ class CreateProfilsTable extends Migration
             $table->string('defaut1');
             $table->string('defaut2');
             $table->string('defaut3');
-            $table->rememberToken();
             $table->timestamps();
         });
     }

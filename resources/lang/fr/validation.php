@@ -34,7 +34,7 @@ return [
     'date' => 'The :attribute is not a valid date.',
     'date_equals' => 'The :attribute must be a date equal to :date.',
     'date_format' => 'The :attribute does not match the format :format.',
-    'different' => 'The :attribute and :other must be different.',
+    'different' => 'La :attribute et la :other doivent êtres différentes.',
     'digits' => 'The :attribute must be :digits digits.',
     'digits_between' => 'The :attribute must be between :min and :max digits.',
     'dimensions' => 'The :attribute has invalid image dimensions.',
@@ -113,7 +113,7 @@ return [
     'starts_with' => 'The :attribute must start with one of the following: :values.',
     'string' => 'The :attribute must be a string.',
     'timezone' => 'The :attribute must be a valid zone.',
-    'unique' => 'The :attribute has already been taken.',
+    'unique' => 'Cette :attribute est déjà utilisée.',
     'uploaded' => 'The :attribute failed to upload.',
     'url' => 'The :attribute format is invalid.',
     'uuid' => 'The :attribute must be a valid UUID.',
@@ -130,8 +130,17 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'email' => [
+            'unique' => 'Cette adresse email est déjà utilisée',
+        ],
+        'defaut1' => [
+            'different' => 'Le :attribute et le :other doivent êtres différents.',
+        ],
+        'defaut2' => [
+            'different' => 'Le :attribute et le :other doivent êtres différents.',
+        ],
+        'defaut3' => [
+            'different' => 'Le :attribute et le :other doivent êtres différents.',
         ],
     ],
 
@@ -146,6 +155,15 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'qualite1' => 'qualité 1',
+        'qualite2' => 'qualité 2',
+        'qualite3' => 'qualité 3',
+        'qualite4' => 'qualité 4',
+        'qualite5' => 'qualité 5',
+        'defaut1' => 'défaut 1',
+        'defaut2' => 'défaut 2',
+        'defaut3' => 'défaut 3',
+    ],
 
 ];

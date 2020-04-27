@@ -17,7 +17,7 @@ class VerificationFormulaireComplete
      */
     public function handle($request, Closure $next)
     {
-        if (Profil::where('id', '=',Auth::user()->id)->doesntExist()) {
+        if (Profil::where('user_id', '=',Auth::user()->id)->doesntExist()) {
             flash("Vous devez terminer l'inscription !")->error();
 
             return redirect('/mes-informations');

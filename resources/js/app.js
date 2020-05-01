@@ -35,11 +35,88 @@ const app = new Vue({
  * Fonctions disable et enable 
  */
 
-document.Disable = function Disable() {
-    document.getElementById("niveauetude").disabled=true;
-  }
+$(document).ready(function(){
+  $("#niveauetude").change(function(){
+    $("#champspe").show();
+  });
+  $("#specialite").change(function(){
+    $("#champqualite1").show();
+  });
+  $("#qualite1").change(function(){
+    $("#champqualite2").show();
+  });
+  $("#qualite2").change(function(){
+    $("#champqualite3").show();
+  });
+  $("#qualite3").change(function(){
+    $("#champqualite4").show();
+  });
+  $("#qualite4").change(function(){
+    $("#champqualite5").show();
+  });
+  $("#qualite5").change(function(){
+    $("#champdefaut1").show();
+  });
+  $("#defaut1").change(function(){
+    $("#champdefaut2").show();
+  });
+  $("#defaut2").change(function(){
+    $("#champdefaut3").show();
+  });
+  $("#defaut3").change(function(){
+    $("#champ_bouton_profil_1").show();
+  });
+});
 
-document.Enable = function Enable() {
-    document.getElementById("niveauetude").disabled=false;
-  }
+var specialite = document.forms["information_profil"]["specialite"].value;
+var qualite1 = document.forms["information_profil"]["qualite1"].value;
+var qualite2 = document.forms["information_profil"]["qualite2"].value;
+var qualite3 = document.forms["information_profil"]["qualite3"].value;
+var qualite4 = document.forms["information_profil"]["qualite4"].value;
+var qualite5 = document.forms["information_profil"]["qualite5"].value;
+var defaut1 = document.forms["information_profil"]["defaut1"].value;
+var defaut2 = document.forms["information_profil"]["defaut2"].value;
+var defaut3 = document.forms["information_profil"]["defaut3"].value;
+
+
+
+$(document).ready(function(){
+
+      if (specialite != "") {
+        $("#champspe").attr("style", "display:yes");
+      };
+
+      if (qualite1 != "") {
+        $("#champqualite1").attr("style", "display:yes");
+      };
+
+      if (qualite2 != "") {
+        $("#champqualite2").attr("style", "display:yes");
+      };
+
+      if (qualite3 != "") {
+        $("#champqualite3").attr("style", "display:yes");
+      };
+
+      if (qualite4 != "") {
+        $("#champqualite4").attr("style", "display:yes");
+      };
+
+      if (qualite5 != "") {
+        $("#champqualite5").attr("style", "display:yes");
+      };
+
+      if (defaut1 != "") {
+        $("#champdefaut1").attr("style", "display:yes");
+      };
+
+      if (defaut2 != "") {
+        $("#champdefaut2").attr("style", "display:yes");
+      };
+
+      if (defaut3 != "") {
+        $("#champdefaut3").attr("style", "display:yes");
+        $("#champ_bouton_profil_1").attr("style", "display:yes");
+      };
+});  
 

@@ -416,7 +416,7 @@
         
         <div class="col-auto" style="display:none" id="champ_bouton_profil_1">
             <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn btn-primary">Terminer l'inscription</button>
+                <button type="submit" class="btn btn-primary">Valider les informations</button>
             </div>
         </div>
     </form>

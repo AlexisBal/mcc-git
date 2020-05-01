@@ -37,34 +37,34 @@ const app = new Vue({
 
 $(document).ready(function(){
   $("#niveauetude").change(function(){
-    $("#champspe").show();
+    $("#champspe").fadeIn("slow");
   });
   $("#specialite").change(function(){
-    $("#champqualite1").show();
+    $("#champqualite1").fadeIn("slow");
   });
   $("#qualite1").change(function(){
-    $("#champqualite2").show();
+    $("#champqualite2").fadeIn("slow");
   });
   $("#qualite2").change(function(){
-    $("#champqualite3").show();
+    $("#champqualite3").fadeIn("slow");
   });
   $("#qualite3").change(function(){
-    $("#champqualite4").show();
+    $("#champqualite4").fadeIn("slow");
   });
   $("#qualite4").change(function(){
-    $("#champqualite5").show();
+    $("#champqualite5").fadeIn("slow");
   });
   $("#qualite5").change(function(){
-    $("#champdefaut1").show();
+    $("#champdefaut1").fadeIn("slow");
   });
   $("#defaut1").change(function(){
-    $("#champdefaut2").show();
+    $("#champdefaut2").fadeIn("slow");
   });
   $("#defaut2").change(function(){
-    $("#champdefaut3").show();
+    $("#champdefaut3").fadeIn("slow");
   });
   $("#defaut3").change(function(){
-    $("#champ_bouton_profil_1").show();
+    $("#champ_bouton_profil_1").fadeIn("slow");
   });
 });
 

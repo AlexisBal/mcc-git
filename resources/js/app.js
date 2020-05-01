@@ -30,3 +30,16 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+/** 
+ * Fonctions disable et enable 
+ */
+
+document.Disable = function Disable() {
+    document.getElementById("niveauetude").disabled=true;
+  }
+
+document.Enable = function Enable() {
+    document.getElementById("niveauetude").disabled=false;
+  }
+

@@ -9,7 +9,7 @@
         <div class="form-group">
          <div class="col-auto">
           <label for="niveauetude">Niveau d'études</label>
-          <select class="form-control @error('niveauetude') is-invalid @enderror" id="niveauetude" name="niveauetude">
+          <select class="form-control @error('niveauetude') is-invalid @enderror" id="niveauetude"  name="niveauetude" onchange="document.getElementById('champspe').style.display='block'">
               <option value="{{ old('niveauetude') }}">{{ old('niveauetude') }}</option>
               <option value="Seconde">Seconde</option>
               <option value="Premiere">Première</option>
@@ -23,10 +23,10 @@
          </div>
         </div>
         
-        <div class="form-group">
+        <div class="form-group" id="champspe" style="display:none">
          <div class="col-auto">
           <label for="specialite">Spécialités choisies</label>
-          <select class="form-control @error('specialite') is-invalid @enderror" id="specialite" name="specialite">
+          <select class="form-control @error('specialite') is-invalid @enderror" id="specialite" name="specialite" onchange="document.getElementById('champqualite1').style.display='block'">
               <option value="{{ old('specialite') }}">{{ $specialite }}</option>
               <option value="m_es_h">MATHS-SES-HUMANITES</option>
               <option value="m_s_h">MATHS-SVT-HUMANITES</option>
@@ -49,10 +49,10 @@
          </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="champqualite1" style="display:none">
          <div class="col-auto">
           <label for="qualite1">Qualité 1</label>
-          <select class="form-control @error('qualite1') is-invalid @enderror" id="qualite1" name="qualite1">
+          <select class="form-control @error('qualite1') is-invalid @enderror" id="qualite1" name="qualite1" onchange="document.getElementById('champqualite2').style.display='block'">
               <option value="{{ old('qualite1') }}">{{ old('qualite1') }}</option>
               <option value="Analytique">Analytique</option>
               <option value="Ambitieux">Ambitieux</option>
@@ -95,12 +95,13 @@
                   <strong>{{ $message }}</strong>
               </span>
           @enderror
+         </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="champqualite2" style="display:none">
          <div class="col-auto">
           <label for="qualite2">Qualité 2</label>
-          <select class="form-control @error('qualite2') is-invalid @enderror" id="qualite2" name="qualite2">
+          <select class="form-control @error('qualite2') is-invalid @enderror" id="qualite2" name="qualite2" onchange="document.getElementById('champqualite3').style.display='block'">
               <option value="{{ old('qualite2') }}">{{ old('qualite2') }}</option>
               <option value="Analytique">Analytique</option>
               <option value="Ambitieux">Ambitieux</option>
@@ -146,10 +147,10 @@
          </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="champqualite3" style="display:none">
          <div class="col-auto">
           <label for="qualite3">Qualité 3</label>
-          <select class="form-control @error('qualite3') is-invalid @enderror" id="qualite3" name="qualite3">
+          <select class="form-control @error('qualite3') is-invalid @enderror" id="qualite3" name="qualite3" onchange="document.getElementById('champqualite4').style.display='block'">
               <option value="{{ old('qualite3') }}">{{ old('qualite3') }}</option>
               <option value="Analytique">Analytique</option>
               <option value="Ambitieux">Ambitieux</option>
@@ -195,10 +196,10 @@
          </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="champqualite4" style="display:none">
          <div class="col-auto">
           <label for="qualite4">Qualité 4</label>
-          <select class="form-control @error('qualite4') is-invalid @enderror" id="qualite4" name="qualite4">
+          <select class="form-control @error('qualite4') is-invalid @enderror" id="qualite4" name="qualite4" onchange="document.getElementById('champqualite5').style.display='block'">
               <option value="{{ old('qualite4') }}">{{ old('qualite4') }}</option>
               <option value="Analytique">Analytique</option>
               <option value="Ambitieux">Ambitieux</option>
@@ -244,10 +245,10 @@
          </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="champqualite5" style="display:none">
          <div class="col-auto">
           <label for="qualite5">Qualité 5</label>
-          <select class="form-control @error('qualite5') is-invalid @enderror" id="qualite5" name="qualite5">
+          <select class="form-control @error('qualite5') is-invalid @enderror" id="qualite5" name="qualite5" onchange="document.getElementById('champdefaut1').style.display='block'">
               <option value="{{ old('qualite5') }}">{{ old('qualite5') }}</option>
               <option value="Analytique">Analytique</option>
               <option value="Ambitieux">Ambitieux</option>
@@ -293,10 +294,10 @@
          </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="champdefaut1" style="display:none">
          <div class="col-auto">
           <label for="defaut1">Défaut 1</label>
-          <select class="form-control @error('defaut1') is-invalid @enderror" id="defaut1" name="defaut1">
+          <select class="form-control @error('defaut1') is-invalid @enderror" id="defaut1" name="defaut1" onchange="document.getElementById('champdefaut2').style.display='block'">
               <option value="{{ old('defaut1') }}">{{ old('defaut1') }}</option>
               <option value="Agressif">Agressif</option>
               <option value="Anxieux">Anxieux</option>
@@ -333,10 +334,10 @@
          </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="champdefaut2" style="display:none">
          <div class="col-auto">
           <label for="defaut2">Défaut 2</label>
-          <select class="form-control @error('defaut2') is-invalid @enderror" value="{{ old('defaut2') }}" id="defaut2" name="defaut2">
+          <select class="form-control @error('defaut2') is-invalid @enderror" value="{{ old('defaut2') }}" id="defaut2" name="defaut2" onchange="document.getElementById('champdefaut3').style.display='block'">
               <option value="{{ old('defaut2') }}">{{ old('defaut2') }}</option>
               <option value="Agressif">Agressif</option>
               <option value="Anxieux">Anxieux</option>
@@ -373,7 +374,7 @@
          </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="champdefaut3" style="display:none">
          <div class="col-auto">
           <label for="defaut3">Défaut 3</label>
           <select class="form-control @error('defaut3') is-invalid @enderror" id="defaut3" name="defaut3">
@@ -413,10 +414,10 @@
          </div>
         </div>
         
-         <div class="col-auto">
+        <div class="col-auto" style="display:none">
             <div class="col-md-6 offset-md-4">
                 <button type="submit" class="btn btn-primary">Terminer l'inscription</button>
             </div>
-         </div>
+        </div>
     </form>
 @endsection      

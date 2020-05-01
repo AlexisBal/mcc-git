@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>My Course Choice - @yield('title')</title>
+    <title>Supenseigne - @yield('title')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

@@ -49526,6 +49526,17 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 var app = new Vue({
   el: '#app'
 });
+/** 
+ * Fonctions disable et enable 
+ */
+
+document.Disable = function Disable() {
+  document.getElementById("niveauetude").disabled = true;
+};
+
+document.Enable = function Enable() {
+  document.getElementById("niveauetude").disabled = false;
+};
 
 /***/ }),
 

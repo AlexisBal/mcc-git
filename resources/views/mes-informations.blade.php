@@ -3,13 +3,13 @@
 @section('title', 'Inscription')
 
 @section('content')
-    <form action="/mes-informations" method="post">
+    <form action="/mes-informations" name="information_profil" method="post">
         @csrf
          
         <div class="form-group">
          <div class="col-auto">
           <label for="niveauetude">Niveau d'études</label>
-          <select class="form-control @error('niveauetude') is-invalid @enderror" id="niveauetude" name="niveauetude">
+          <select class="form-control @error('niveauetude') is-invalid @enderror" id="niveauetude"  name="niveauetude">
               <option value="{{ old('niveauetude') }}">{{ old('niveauetude') }}</option>
               <option value="Seconde">Seconde</option>
               <option value="Premiere">Première</option>
@@ -23,7 +23,7 @@
          </div>
         </div>
         
-        <div class="form-group">
+        <div class="form-group" id="champspe" style="display:none">
          <div class="col-auto">
           <label for="specialite">Spécialités choisies</label>
           <select class="form-control @error('specialite') is-invalid @enderror" id="specialite" name="specialite">
@@ -49,96 +49,18 @@
          </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="champlv1" style="display:none">
          <div class="col-auto">
-          <label for="qualite1">Qualité 1</label>
-          <select class="form-control @error('qualite1') is-invalid @enderror" id="qualite1" name="qualite1">
-              <option value="{{ old('qualite1') }}">{{ old('qualite1') }}</option>
-              <option value="Analytique">Analytique</option>
-              <option value="Ambitieux">Ambitieux</option>
-              <option value="Astucieux">Astucieux</option>
-              <option value="Charismatique">Charismatique</option>
-              <option value="Communicatif">Communicatif</option>
-              <option value="Constructif">Constructif</option>
-              <option value="Convaincant">Convaincant</option>
-              <option value="Cooperatif">Coopératif</option>
-              <option value="Courageux">Courageux</option>
-              <option value="Creatif">Créatif</option>
-              <option value="Curieux">Curieux</option>
-              <option value="Diplomate">Diplomate</option>
-              <option value="Dynamique">Dynamique</option>
-              <option value="Efficace">Efficace</option>
-              <option value="Fiable">Fiable</option>
-              <option value="Flexible">Flexible</option>
-              <option value="Honnete">Honnête</option>
-              <option value="Independant">Indépendant</option>
-              <option value="Inventif">Inventif</option>
-              <option value="Leader">Leader</option>
-              <option value="Loyal">Loyal</option>
-              <option value="Minutieux">Minutieux</option>
-              <option value="Observateur">Observateur</option>
-              <option value="Optimiste">Optimiste</option>
-              <option value="Organise">Organisé</option>
-              <option value="Ouvert d’esprit">Ouvert d’esprit</option>
-              <option value="Passionne">Passionné</option>
-              <option value="Perfectionniste">Perfectionniste</option>
-              <option value="Polyvalent">Polyvalent</option>
-              <option value="Reflechi">Réfléchi</option>
-              <option value="Rigoureux">Rigoureux</option>
-              <option value="Soigneux">Soigneux</option>
-              <option value="Souriant">Souriant</option>
-              <option value="Travailleur">Travailleur</option>
-              <option value="Volontaire">Volontaire</option>
+          <label for="lv1">LV1</label>
+          <select class="form-control @error('lv1') is-invalid @enderror" id="lv1" name="lv1">
+              <option value="{{ old('lv1') }}">{{ old('lv1') }}</option>
+              <option value="Anglais">Anglais</option>
+              <option value="Allemand">Allemand</option>
+              <option value="Espagnol">Espagnol</option>
+              <option value="Chinois">Chinois</option>
+              <option value="Japonais">Japonais</option>
           </select>
-          @error('qualite1')
-              <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-              </span>
-          @enderror
-        </div>
-
-        <div class="form-group">
-         <div class="col-auto">
-          <label for="qualite2">Qualité 2</label>
-          <select class="form-control @error('qualite2') is-invalid @enderror" id="qualite2" name="qualite2">
-              <option value="{{ old('qualite2') }}">{{ old('qualite2') }}</option>
-              <option value="Analytique">Analytique</option>
-              <option value="Ambitieux">Ambitieux</option>
-              <option value="Astucieux">Astucieux</option>
-              <option value="Charismatique">Charismatique</option>
-              <option value="Communicatif">Communicatif</option>
-              <option value="Constructif">Constructif</option>
-              <option value="Convaincant">Convaincant</option>
-              <option value="Cooperatif">Coopératif</option>
-              <option value="Courageux">Courageux</option>
-              <option value="Creatif">Créatif</option>
-              <option value="Curieux">Curieux</option>
-              <option value="Diplomate">Diplomate</option>
-              <option value="Dynamique">Dynamique</option>
-              <option value="Efficace">Efficace</option>
-              <option value="Fiable">Fiable</option>
-              <option value="Flexible">Flexible</option>
-              <option value="Honnete">Honnête</option>
-              <option value="Independant">Indépendant</option>
-              <option value="Inventif">Inventif</option>
-              <option value="Leader">Leader</option>
-              <option value="Loyal">Loyal</option>
-              <option value="Minutieux">Minutieux</option>
-              <option value="Observateur">Observateur</option>
-              <option value="Optimiste">Optimiste</option>
-              <option value="Organise">Organisé</option>
-              <option value="Ouvert d’esprit">Ouvert d’esprit</option>
-              <option value="Passionne">Passionné</option>
-              <option value="Perfectionniste">Perfectionniste</option>
-              <option value="Polyvalent">Polyvalent</option>
-              <option value="Reflechi">Réfléchi</option>
-              <option value="Rigoureux">Rigoureux</option>
-              <option value="Soigneux">Soigneux</option>
-              <option value="Souriant">Souriant</option>
-              <option value="Travailleur">Travailleur</option>
-              <option value="Volontaire">Volontaire</option>
-          </select>
-          @error('qualite2')
+          @error('lv1')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
               </span>
@@ -146,11 +68,75 @@
          </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="champprofileleve" style="display:none">
          <div class="col-auto">
-          <label for="qualite3">Qualité 3</label>
-          <select class="form-control @error('qualite3') is-invalid @enderror" id="qualite3" name="qualite3">
-              <option value="{{ old('qualite3') }}">{{ old('qualite3') }}</option>
+          <label for="profileleve">Quel type d'élève es-tu ?</label>
+          <select class="form-control @error('profileleve') is-invalid @enderror" id="profileleve" name="profileleve">
+              <option value="{{ old('profileleve') }}">{{ old('profileleve') }}</option>
+              <option value="Analytique">Analytique</option>
+              <option value="test">test</option>
+          </select>
+          @error('profileleve')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+         </div>
+        </div>
+
+        <div class="form-group" id="champambiancetravail" style="display:none">
+         <div class="col-auto">
+          <label for="ambiancetravail">Pour toi, une bonne ambiance de travail, c’est ... </label>
+          <select class="form-control @error('ambiancetravail') is-invalid @enderror" id="ambiancetravail" name="ambiancetravail">
+              <option value="{{ old('ambiancetravail') }}">{{ old('ambiancetravail') }}</option>
+              <option value="Analytique">Analytique</option>
+              <option value="Ambitieux">Ambitieux</option>
+              <option value="Astucieux">Astucieux</option>
+              <option value="Charismatique">Charismatique</option>
+              <option value="Communicatif">Communicatif</option>
+              <option value="Constructif">Constructif</option>
+              <option value="Convaincant">Convaincant</option>
+              <option value="Cooperatif">Coopératif</option>
+              <option value="Volontaire">Volontaire</option>
+          </select>
+          @error('ambiancetravail')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+         </div>
+        </div>
+
+        <div class="form-group" id="champtempstravail" style="display:none">
+         <div class="col-auto">
+          <label for="tempstravail">Ton temps de travail personnel hebdomadaire</label>
+          <select class="form-control @error('tempstravail') is-invalid @enderror" id="tempstravail" name="tempstravail">
+              <option value="{{ old('tempstravail') }}">{{ old('tempstravail') }}</option>
+              <option value="Analytique">Analytique</option>
+              <option value="Ambitieux">Ambitieux</option>
+              <option value="Astucieux">Astucieux</option>
+              <option value="Charismatique">Charismatique</option>
+              <option value="Communicatif">Communicatif</option>
+              <option value="Constructif">Constructif</option>
+              <option value="Convaincant">Convaincant</option>
+              <option value="Cooperatif">Coopératif</option>
+              <option value="Courageux">Courageux</option>
+              <option value="Creatif">Créatif</option>
+              <option value="Volontaire">Volontaire</option>
+          </select>
+          @error('tempstravail')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+         </div>
+        </div>
+
+        <div class="form-group" id="champmethodes" style="display:none">
+         <div class="col-auto">
+          <label for="methodes">Quels sont tes méthodes de travail ?</label>
+          <select class="form-control @error('methodes') is-invalid @enderror" id="methodes" name="methodes">
+              <option value="{{ old('methodes') }}">{{ old('methodes') }}</option>
               <option value="Analytique">Analytique</option>
               <option value="Ambitieux">Ambitieux</option>
               <option value="Astucieux">Astucieux</option>
@@ -167,27 +153,8 @@
               <option value="Efficace">Efficace</option>
               <option value="Fiable">Fiable</option>
               <option value="Flexible">Flexible</option>
-              <option value="Honnete">Honnête</option>
-              <option value="Independant">Indépendant</option>
-              <option value="Inventif">Inventif</option>
-              <option value="Leader">Leader</option>
-              <option value="Loyal">Loyal</option>
-              <option value="Minutieux">Minutieux</option>
-              <option value="Observateur">Observateur</option>
-              <option value="Optimiste">Optimiste</option>
-              <option value="Organise">Organisé</option>
-              <option value="Ouvert d’esprit">Ouvert d’esprit</option>
-              <option value="Passionne">Passionné</option>
-              <option value="Perfectionniste">Perfectionniste</option>
-              <option value="Polyvalent">Polyvalent</option>
-              <option value="Reflechi">Réfléchi</option>
-              <option value="Rigoureux">Rigoureux</option>
-              <option value="Soigneux">Soigneux</option>
-              <option value="Souriant">Souriant</option>
-              <option value="Travailleur">Travailleur</option>
-              <option value="Volontaire">Volontaire</option>
           </select>
-          @error('qualite3')
+          @error('methodes')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
               </span>
@@ -195,109 +162,11 @@
          </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="champmatieresfav" style="display:none">
          <div class="col-auto">
-          <label for="qualite4">Qualité 4</label>
-          <select class="form-control @error('qualite4') is-invalid @enderror" id="qualite4" name="qualite4">
-              <option value="{{ old('qualite4') }}">{{ old('qualite4') }}</option>
-              <option value="Analytique">Analytique</option>
-              <option value="Ambitieux">Ambitieux</option>
-              <option value="Astucieux">Astucieux</option>
-              <option value="Charismatique">Charismatique</option>
-              <option value="Communicatif">Communicatif</option>
-              <option value="Constructif">Constructif</option>
-              <option value="Convaincant">Convaincant</option>
-              <option value="Cooperatif">Coopératif</option>
-              <option value="Courageux">Courageux</option>
-              <option value="Creatif">Créatif</option>
-              <option value="Curieux">Curieux</option>
-              <option value="Diplomate">Diplomate</option>
-              <option value="Dynamique">Dynamique</option>
-              <option value="Efficace">Efficace</option>
-              <option value="Fiable">Fiable</option>
-              <option value="Flexible">Flexible</option>
-              <option value="Honnete">Honnête</option>
-              <option value="Independant">Indépendant</option>
-              <option value="Inventif">Inventif</option>
-              <option value="Leader">Leader</option>
-              <option value="Loyal">Loyal</option>
-              <option value="Minutieux">Minutieux</option>
-              <option value="Observateur">Observateur</option>
-              <option value="Optimiste">Optimiste</option>
-              <option value="Organise">Organisé</option>
-              <option value="Ouvert d’esprit">Ouvert d’esprit</option>
-              <option value="Passionne">Passionné</option>
-              <option value="Perfectionniste">Perfectionniste</option>
-              <option value="Polyvalent">Polyvalent</option>
-              <option value="Reflechi">Réfléchi</option>
-              <option value="Rigoureux">Rigoureux</option>
-              <option value="Soigneux">Soigneux</option>
-              <option value="Souriant">Souriant</option>
-              <option value="Travailleur">Travailleur</option>
-              <option value="Volontaire">Volontaire</option>
-          </select>
-          @error('qualite4')
-              <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-              </span>
-          @enderror
-         </div>
-        </div>
-
-        <div class="form-group">
-         <div class="col-auto">
-          <label for="qualite5">Qualité 5</label>
-          <select class="form-control @error('qualite5') is-invalid @enderror" id="qualite5" name="qualite5">
-              <option value="{{ old('qualite5') }}">{{ old('qualite5') }}</option>
-              <option value="Analytique">Analytique</option>
-              <option value="Ambitieux">Ambitieux</option>
-              <option value="Astucieux">Astucieux</option>
-              <option value="Charismatique">Charismatique</option>
-              <option value="Communicatif">Communicatif</option>
-              <option value="Constructif">Constructif</option>
-              <option value="Convaincant">Convaincant</option>
-              <option value="Cooperatif">Coopératif</option>
-              <option value="Courageux">Courageux</option>
-              <option value="Creatif">Créatif</option>
-              <option value="Curieux">Curieux</option>
-              <option value="Diplomate">Diplomate</option>
-              <option value="Dynamique">Dynamique</option>
-              <option value="Efficace">Efficace</option>
-              <option value="Fiable">Fiable</option>
-              <option value="Flexible">Flexible</option>
-              <option value="Honnete">Honnête</option>
-              <option value="Independant">Indépendant</option>
-              <option value="Inventif">Inventif</option>
-              <option value="Leader">Leader</option>
-              <option value="Loyal">Loyal</option>
-              <option value="Minutieux">Minutieux</option>
-              <option value="Observateur">Observateur</option>
-              <option value="Optimiste">Optimiste</option>
-              <option value="Organise">Organisé</option>
-              <option value="Ouvert d’esprit">Ouvert d’esprit</option>
-              <option value="Passionne">Passionné</option>
-              <option value="Perfectionniste">Perfectionniste</option>
-              <option value="Polyvalent">Polyvalent</option>
-              <option value="Reflechi">Réfléchi</option>
-              <option value="Rigoureux">Rigoureux</option>
-              <option value="Soigneux">Soigneux</option>
-              <option value="Souriant">Souriant</option>
-              <option value="Travailleur">Travailleur</option>
-              <option value="Volontaire">Volontaire</option>
-          </select>
-          @error('qualite5')
-              <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-              </span>
-          @enderror
-         </div>
-        </div>
-
-        <div class="form-group">
-         <div class="col-auto">
-          <label for="defaut1">Défaut 1</label>
-          <select class="form-control @error('defaut1') is-invalid @enderror" id="defaut1" name="defaut1">
-              <option value="{{ old('defaut1') }}">{{ old('defaut1') }}</option>
+          <label for="matieresfav">Quelles sont tes matières favorites ?</label>
+          <select class="form-control @error('matieresfav') is-invalid @enderror" id="matieresfav" name="matieresfav">
+              <option value="{{ old('matieresfav') }}">{{ old('matieresfav') }}</option>
               <option value="Agressif">Agressif</option>
               <option value="Anxieux">Anxieux</option>
               <option value="Astucieux">Astucieux</option>
@@ -308,24 +177,8 @@
               <option value="Blessant">Blessant</option>
               <option value="Capricieux">Capricieux</option>
               <option value="Caracteriel">Caractériel</option>
-              <option value="Catastrophiste">Catastrophiste</option>
-              <option value="Colerique">Colérique</option>
-              <option value="Defaitiste">Défaitiste</option>
-              <option value="Desordonne">Désordonné</option>
-              <option value="Distrait">Distrait</option>
-              <option value="Emotif">Émotif</option>
-              <option value="Impatient">Impatient</option>
-              <option value="Impulsif">Impulsif</option>
-              <option value="Influençable">Influençable</option>
-              <option value="Intolerant">Intolérant</option>
-              <option value="Lent">Lent</option>
-              <option value="Manque_de_confiance">Manque de confiance</option>
-              <option value="Mefiant">Méfiant</option>
-              <option value="Obstination">Obstination</option>
-              <option value="Susceptible">Susceptible</option>
-              <option value="Timide">Timide</option>
           </select>
-          @error('defaut1')
+          @error('matieresfav')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
               </span>
@@ -333,11 +186,11 @@
          </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="champmaths" style="display:none">
          <div class="col-auto">
-          <label for="defaut2">Défaut 2</label>
-          <select class="form-control @error('defaut2') is-invalid @enderror" value="{{ old('defaut2') }}" id="defaut2" name="defaut2">
-              <option value="{{ old('defaut2') }}">{{ old('defaut2') }}</option>
+          <label for="maths">Ta moyenne en Maths</label>
+          <select class="form-control @error('maths') is-invalid @enderror" id="maths" name="maths">
+              <option value="{{ old('maths') }}">{{ old('maths') }}</option>
               <option value="Agressif">Agressif</option>
               <option value="Anxieux">Anxieux</option>
               <option value="Astucieux">Astucieux</option>
@@ -346,26 +199,8 @@
               <option value="Autoritaire">Autoritaire</option>
               <option value="Bavard">Bavard</option>
               <option value="Blessant">Blessant</option>
-              <option value="Capricieux">Capricieux</option>
-              <option value="Caracteriel">Caractériel</option>
-              <option value="Catastrophiste">Catastrophiste</option>
-              <option value="Colerique">Colérique</option>
-              <option value="Defaitiste">Défaitiste</option>
-              <option value="Desordonne">Désordonné</option>
-              <option value="Distrait">Distrait</option>
-              <option value="Emotif">Émotif</option>
-              <option value="Impatient">Impatient</option>
-              <option value="Impulsif">Impulsif</option>
-              <option value="Influençable">Influençable</option>
-              <option value="Intolerant">Intolérant</option>
-              <option value="Lent">Lent</option>
-              <option value="Manque_de_confiance">Manque de confiance</option>
-              <option value="Mefiant">Méfiant</option>
-              <option value="Obstination">Obstination</option>
-              <option value="Susceptible">Susceptible</option>
-              <option value="Timide">Timide</option>
           </select>
-          @error('defaut2')
+          @error('maths')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
               </span>
@@ -373,11 +208,11 @@
          </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="champphysique" style="display:none">
          <div class="col-auto">
-          <label for="defaut3">Défaut 3</label>
-          <select class="form-control @error('defaut3') is-invalid @enderror" id="defaut3" name="defaut3">
-              <option value="{{ old('defaut3') }}">{{ old('defaut3') }}</option>
+          <label for="physique">Ta moyenne en Physique</label>
+          <select class="form-control @error('physique') is-invalid @enderror" value="{{ old('physique') }}" id="physique" name="physique">
+              <option value="{{ old('physique') }}">{{ old('physique') }}</option>
               <option value="Agressif">Agressif</option>
               <option value="Anxieux">Anxieux</option>
               <option value="Astucieux">Astucieux</option>
@@ -386,26 +221,140 @@
               <option value="Autoritaire">Autoritaire</option>
               <option value="Bavard">Bavard</option>
               <option value="Blessant">Blessant</option>
-              <option value="Capricieux">Capricieux</option>
-              <option value="Caracteriel">Caractériel</option>
-              <option value="Catastrophiste">Catastrophiste</option>
-              <option value="Colerique">Colérique</option>
-              <option value="Defaitiste">Défaitiste</option>
-              <option value="Desordonne">Désordonné</option>
-              <option value="Distrait">Distrait</option>
-              <option value="Emotif">Émotif</option>
-              <option value="Impatient">Impatient</option>
-              <option value="Impulsif">Impulsif</option>
-              <option value="Influençable">Influençable</option>
-              <option value="Intolerant">Intolérant</option>
-              <option value="Lent">Lent</option>
-              <option value="Manque_de_confiance">Manque de confiance</option>
-              <option value="Mefiant">Méfiant</option>
-              <option value="Obstination">Obstination</option>
-              <option value="Susceptible">Susceptible</option>
-              <option value="Timide">Timide</option>
           </select>
-          @error('defaut3')
+          @error('physique')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+         </div>
+        </div>
+
+        <div class="form-group" id="champsvt" style="display:none">
+         <div class="col-auto">
+          <label for="svt">Ta moyenne en SVT</label>
+          <select class="form-control @error('svt') is-invalid @enderror" value="{{ old('svt') }}" id="svt" name="svt">
+              <option value="{{ old('svt') }}">{{ old('svt') }}</option>
+              <option value="Agressif">Agressif</option>
+              <option value="Anxieux">Anxieux</option>
+              <option value="Astucieux">Astucieux</option>
+              <option value="Arrogant">Arrogant</option>
+              <option value="Assiste">Assisté</option>
+              <option value="Autoritaire">Autoritaire</option>
+              <option value="Bavard">Bavard</option>
+              <option value="Blessant">Blessant</option>
+          </select>
+          @error('svt')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+         </div>
+        </div>
+
+        <div class="form-group" id="champsi" style="display:none">
+         <div class="col-auto">
+          <label for="si">Ta moyenne en SI</label>
+          <select class="form-control @error('si') is-invalid @enderror" value="{{ old('si') }}" id="si" name="si">
+              <option value="{{ old('si') }}">{{ old('si') }}</option>
+              <option value="Agressif">Agressif</option>
+              <option value="Anxieux">Anxieux</option>
+              <option value="Astucieux">Astucieux</option>
+              <option value="Arrogant">Arrogant</option>
+              <option value="Assiste">Assisté</option>
+              <option value="Autoritaire">Autoritaire</option>
+              <option value="Bavard">Bavard</option>
+              <option value="Blessant">Blessant</option>
+          </select>
+          @error('si')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+         </div>
+        </div>
+
+        <div class="form-group" id="champeco" style="display:none">
+         <div class="col-auto">
+          <label for="eco">Ta moyenne en Economie</label>
+          <select class="form-control @error('eco') is-invalid @enderror" value="{{ old('eco') }}" id="eco" name="eco">
+              <option value="{{ old('eco') }}">{{ old('eco') }}</option>
+              <option value="Agressif">Agressif</option>
+              <option value="Anxieux">Anxieux</option>
+              <option value="Astucieux">Astucieux</option>
+              <option value="Arrogant">Arrogant</option>
+              <option value="Assiste">Assisté</option>
+              <option value="Autoritaire">Autoritaire</option>
+              <option value="Bavard">Bavard</option>
+              <option value="Blessant">Blessant</option>
+          </select>
+          @error('eco')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+         </div>
+        </div>
+
+        <div class="form-group" id="champfrancais" style="display:none">
+         <div class="col-auto">
+          <label for="francais">Ta moyenne en Français</label>
+          <select class="form-control @error('francais') is-invalid @enderror" value="{{ old('francais') }}" id="francais" name="francais">
+              <option value="{{ old('francais') }}">{{ old('maths') }}</option>
+              <option value="Agressif">Agressif</option>
+              <option value="Anxieux">Anxieux</option>
+              <option value="Astucieux">Astucieux</option>
+              <option value="Arrogant">Arrogant</option>
+              <option value="Assiste">Assisté</option>
+              <option value="Autoritaire">Autoritaire</option>
+              <option value="Bavard">Bavard</option>
+              <option value="Blessant">Blessant</option>
+          </select>
+          @error('francais')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+         </div>
+        </div>
+
+        <div class="form-group" id="champphilosophie" style="display:none">
+         <div class="col-auto">
+          <label for="philosophie">Ta moyenne en Philosophie</label>
+          <select class="form-control @error('philosophie') is-invalid @enderror" id="philosophie" name="philosophie">
+              <option value="{{ old('philosophie') }}">{{ old('philosophie') }}</option>
+              <option value="Agressif">Agressif</option>
+              <option value="Anxieux">Anxieux</option>
+              <option value="Astucieux">Astucieux</option>
+              <option value="Arrogant">Arrogant</option>
+              <option value="Assiste">Assisté</option>
+              <option value="Autoritaire">Autoritaire</option>
+              <option value="Bavard">Bavard</option>
+              <option value="Blessant">Blessant</option>
+          </select>
+          @error('philosophie')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+         </div>
+        </div>
+
+        <div class="form-group" id="champanglais" style="display:none">
+         <div class="col-auto">
+          <label for="anglais">Ta moyenne en Anglais</label>
+          <select class="form-control @error('anglais') is-invalid @enderror" id="anglais" name="anglais">
+              <option value="{{ old('anglais') }}">{{ old('anglais') }}</option>
+              <option value="Agressif">Agressif</option>
+              <option value="Anxieux">Anxieux</option>
+              <option value="Astucieux">Astucieux</option>
+              <option value="Arrogant">Arrogant</option>
+              <option value="Assiste">Assisté</option>
+              <option value="Autoritaire">Autoritaire</option>
+              <option value="Bavard">Bavard</option>
+              <option value="Blessant">Blessant</option>
+          </select>
+          @error('anglais')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
               </span>
@@ -413,10 +362,10 @@
          </div>
         </div>
         
-         <div class="col-auto">
+        <div class="col-auto" style="display:none" id="champ_bouton_profil_1">
             <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn btn-primary">Terminer l'inscription</button>
+                <button type="submit" class="btn btn-primary">Valider les informations</button>
             </div>
-         </div>
+        </div>
     </form>
 @endsection      

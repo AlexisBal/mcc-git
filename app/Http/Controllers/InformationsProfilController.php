@@ -121,10 +121,8 @@ class InformationsProfilController extends Controller
             'philosophie' => request('philosophie'),
             'anglais' => request('anglais'),
         ]);
-
-        {
-            return redirect('/mes-informations-suite');
-        }
+        
+        return redirect('/mes-informations-suite'); 
     }
     
 	public function traitement_part2()

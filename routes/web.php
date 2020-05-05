@@ -30,3 +30,11 @@ Route::group([
     Route::post('/modification-profil', 'ModifieProfilController@modifier');
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

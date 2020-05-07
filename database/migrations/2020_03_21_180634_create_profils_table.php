@@ -20,9 +20,11 @@ class CreateProfilsTable extends Migration
             $table->string('lv1')->default("");
             $table->string('profileleve')->default("");
             $table->string('ambiancetravail')->default("");
-            $table->string('tempstravail')->default("");
+            $table->string('tempstravailsemaine')->default("");
+            $table->string('tempstravailwe')->default("");
             $table->string('methodes')->default("");
             $table->string('matieresfav')->default("");
+            $table->string('matieresdet')->default("");
             $table->string('maths')->default("");
             $table->string('physique')->default("");
             $table->string('svt')->default("");

@@ -73,8 +73,11 @@
           <label for="profileleve">Quel type d'élève es-tu ?</label>
           <select class="form-control @error('profileleve') is-invalid @enderror" id="profileleve" name="profileleve">
               <option value="{{ old('profileleve') }}">{{ old('profileleve') }}</option>
-              <option value="Analytique">Analytique</option>
-              <option value="test">test</option>
+              <option value="S_T_T">Sérieux, travailleur mais timide</option>
+              <option value="S_T_B">Sérieux, travailleur mais bavard</option>
+              <option value="F_T">Possède des facilités et travaille</option>
+              <option value="F_NT">Possède des facilités mais ne travaille pas</option>
+              <option value="S_T_T">N'est pas motivé et ne travaille pas</option>
           </select>
           @error('profileleve')
               <span class="invalid-feedback" role="alert">
@@ -89,15 +92,10 @@
           <label for="ambiancetravail">Pour toi, une bonne ambiance de travail, c’est ... </label>
           <select class="form-control @error('ambiancetravail') is-invalid @enderror" id="ambiancetravail" name="ambiancetravail">
               <option value="{{ old('ambiancetravail') }}">{{ old('ambiancetravail') }}</option>
-              <option value="Analytique">Analytique</option>
-              <option value="Ambitieux">Ambitieux</option>
-              <option value="Astucieux">Astucieux</option>
-              <option value="Charismatique">Charismatique</option>
-              <option value="Communicatif">Communicatif</option>
-              <option value="Constructif">Constructif</option>
-              <option value="Convaincant">Convaincant</option>
-              <option value="Cooperatif">Coopératif</option>
-              <option value="Volontaire">Volontaire</option>
+              <option value="calme">Du calme, du calme et encore du calme</option>
+              <option value="musique">Ecouter son album préféré</option>
+              <option value="tv">Travailler devant la télé</option>
+              <option value="tel">Travailler avec son téléphone à proximité</option>
           </select>
           @error('ambiancetravail')
               <span class="invalid-feedback" role="alert">
@@ -107,24 +105,47 @@
          </div>
         </div>
 
-        <div class="form-group" id="champtempstravail" style="display:none">
+        <div class="form-group" id="champtempssemaine" style="display:none">
          <div class="col-auto">
-          <label for="tempstravail">Ton temps de travail personnel hebdomadaire</label>
-          <select class="form-control @error('tempstravail') is-invalid @enderror" id="tempstravail" name="tempstravail">
-              <option value="{{ old('tempstravail') }}">{{ old('tempstravail') }}</option>
-              <option value="Analytique">Analytique</option>
-              <option value="Ambitieux">Ambitieux</option>
-              <option value="Astucieux">Astucieux</option>
-              <option value="Charismatique">Charismatique</option>
-              <option value="Communicatif">Communicatif</option>
-              <option value="Constructif">Constructif</option>
-              <option value="Convaincant">Convaincant</option>
-              <option value="Cooperatif">Coopératif</option>
-              <option value="Courageux">Courageux</option>
-              <option value="Creatif">Créatif</option>
-              <option value="Volontaire">Volontaire</option>
+          <label for="tempstravailsemaine">Ton temps de travail personnel en semaine</label>
+          <select class="form-control @error('tempstravailsemaine') is-invalid @enderror" id="tempstravailsemaine" name="tempstravailsemaine">
+              <option value="{{ old('tempstravailsemaine') }}">{{ old('tempstravailsemaine') }}</option>
+              <option value="30min">30min par soir</option>
+              <option value="1h">1h par soir</option>
+              <option value="1h30">1h30 par soir</option>
+              <option value="2h">2h par soir</option>
+              <option value="2h30">2h30 par soir</option>
+              <option value="3h">3h par soir</option>
+              <option value="3h30">3h30 par soir</option>
+              <option value="4h">4h par soir</option>
+              <option value="Plus">Plus de 4h par soir</option>
           </select>
-          @error('tempstravail')
+          @error('tempstravailsemaine')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+         </div>
+        </div>
+
+        <div class="form-group" id="champtempstravailwe" style="display:none">
+         <div class="col-auto">
+          <label for="tempstravailwe">Ton temps de travail personnel le weekend</label>
+          <select class="form-control @error('tempstravailwe') is-invalid @enderror" id="tempstravailwe" name="tempstravailwe">
+              <option value="{{ old('tempstravailwe') }}">{{ old('tempstravail') }}</option>
+              <option value="30min">30min</option>
+              <option value="1h">1h</option>
+              <option value="2h">2h</option>
+              <option value="3h">3h</option>
+              <option value="4h">4h</option>
+              <option value="5h">5h</option>
+              <option value="6h">6h</option>
+              <option value="7h">7h</option>
+              <option value="8h">8h</option>
+              <option value="10h">10h</option>
+              <option value="Plus">Plus de 10h</option>
+          </select>
+          @error('tempstravailwe')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
               </span>
@@ -137,22 +158,10 @@
           <label for="methodes">Quels sont tes méthodes de travail ?</label>
           <select class="form-control @error('methodes') is-invalid @enderror" id="methodes" name="methodes">
               <option value="{{ old('methodes') }}">{{ old('methodes') }}</option>
-              <option value="Analytique">Analytique</option>
-              <option value="Ambitieux">Ambitieux</option>
-              <option value="Astucieux">Astucieux</option>
-              <option value="Charismatique">Charismatique</option>
-              <option value="Communicatif">Communicatif</option>
-              <option value="Constructif">Constructif</option>
-              <option value="Convaincant">Convaincant</option>
-              <option value="Cooperatif">Coopératif</option>
-              <option value="Courageux">Courageux</option>
-              <option value="Creatif">Créatif</option>
-              <option value="Curieux">Curieux</option>
-              <option value="Diplomate">Diplomate</option>
-              <option value="Dynamique">Dynamique</option>
-              <option value="Efficace">Efficace</option>
-              <option value="Fiable">Fiable</option>
-              <option value="Flexible">Flexible</option>
+              <option value="F_R">Je fais des fiches et travaille mes cours tous les soirs</option>
+              <option value="F_NR">Je fais des fiches mais ne travaille pas mes cours tous les soirs</option>
+              <option value="NF_R">Je ne fais pas de fiches mais travaille mes cours tous les soirs</option>
+              <option value="NF_NR">Je ne fais pas de fiches et ne travaille pas mes cours tous les soirs</option>
           </select>
           @error('methodes')
               <span class="invalid-feedback" role="alert">
@@ -164,21 +173,132 @@
 
         <div class="form-group" id="champmatieresfav" style="display:none">
          <div class="col-auto">
-          <label for="matieresfav">Quelles sont tes matières favorites ?</label>
+          <label for="matieresfav">Quelles sont tes 2 matières favorites ?</label>
           <select class="form-control @error('matieresfav') is-invalid @enderror" id="matieresfav" name="matieresfav">
               <option value="{{ old('matieresfav') }}">{{ old('matieresfav') }}</option>
-              <option value="Agressif">Agressif</option>
-              <option value="Anxieux">Anxieux</option>
-              <option value="Astucieux">Astucieux</option>
-              <option value="Arrogant">Arrogant</option>
-              <option value="Assiste">Assisté</option>
-              <option value="Autoritaire">Autoritaire</option>
-              <option value="Bavard">Bavard</option>
-              <option value="Blessant">Blessant</option>
-              <option value="Capricieux">Capricieux</option>
-              <option value="Caracteriel">Caractériel</option>
+              <option value="M_P">Maths - Physique</option>
+              <option value="M_SI">Maths - SI</option>
+              <option value="M_S">Maths - SVT</option>
+              <option value="M_F">Maths - Francais</option>
+              <option value="M_H">Maths - Philosophie</option>
+              <option value="M_E">Maths - Eco</option>
+              <option value="M_LV1">Maths - LV1</option>
+              <option value="M_LV2">Maths - LV2</option>
+              <option value="P_SI">Physique - SI</option>
+              <option value="P_SVT">Physique - SVT</option>
+              <option value="P_F">Physique - Francais</option>
+              <option value="P_H">Physique - Philosophie</option>
+              <option value="P_E">Physique - Eco</option>
+              <option value="P_LV1">Physique - LV1</option>
+              <option value="P_LV2">Physique - LV2</option>
+              <option value="S_F">SVT - Francais</option>
+              <option value="S_H">SVT - Philosophie</option>
+              <option value="S_E">SVT - Eco</option>
+              <option value="S_LV1">SVT - LV1</option>
+              <option value="S_LV2">SVT - LV2</option>
+              <option value="SI_F">SI - Francais</option>
+              <option value="SI_H">SI - Philosophie</option>
+              <option value="SI_E">SI - Eco</option>
+              <option value="SI_LV1">SI - LV1</option>
+              <option value="SI_LV2">SI - LV2</option>
+              <option value="F_E">Français - Eco</option>
+              <option value="F_H">Français - Philosophie</option>
+              <option value="F_LV1">Français - LV1</option>
+              <option value="F_LV2">Français - LV2</option>
+              <option value="E_H">Eco - Philosophie</option>
+              <option value="E_LV1">Eco - LV1</option>
+              <option value="E_LV2">Eco - LV2</option>
+              <option value="LV1_H">LV1 - Philosophie</option>
+              <option value="LV2_H">LV2 - Philosophie</option>
+              <option value="LV1_LV2">LV1 - LV2</option>
+            
+
           </select>
           @error('matieresfav')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+         </div>
+        </div>
+
+        <div class="form-group" id="champmatieresdet" style="display:none">
+         <div class="col-auto">
+          <label for="matieresdet">Quelles sont les matières que tu détestes ?</label>
+          <select class="form-control @error('matieresdet') is-invalid @enderror" id="matieresdet" name="matieresdet">
+              <option value="{{ old('matieresdet') }}">{{ old('matieresdet') }}</option>
+              <option value="aucune">Aucune</option>
+              <option value="M_SI">Maths - SI</option>
+              <option value="M_S">Maths - SVT</option>
+              <option value="M_F">Maths - Francais</option>
+              <option value="M_H">Maths - Philosophie</option>
+              <option value="M_E">Maths - Eco</option>
+              <option value="M_LV1">Maths - LV1</option>
+              <option value="M_LV2">Maths - LV2</option>
+              <option value="P_SI">Physique - SI</option>
+              <option value="P_SVT">Physique - SVT</option>
+              <option value="P_F">Physique - Francais</option>
+              <option value="P_H">Physique - Philosophie</option>
+              <option value="P_E">Physique - Eco</option>
+              <option value="P_LV1">Physique - LV1</option>
+              <option value="P_LV2">Physique - LV2</option>
+              <option value="S_F">SVT - Francais</option>
+              <option value="S_H">SVT - Philosophie</option>
+              <option value="S_E">SVT - Eco</option>
+              <option value="S_LV1">SVT - LV1</option>
+              <option value="S_LV2">SVT - LV2</option>
+              <option value="SI_F">SI - Francais</option>
+              <option value="SI_H">SI - Philosophie</option>
+              <option value="SI_E">SI - Eco</option>
+              <option value="SI_LV1">SI - LV1</option>
+              <option value="SI_LV2">SI - LV2</option>
+              <option value="F_E">Français - Eco</option>
+              <option value="F_H">Français - Philosophie</option>
+              <option value="F_LV1">Français - LV1</option>
+              <option value="F_LV2">Français - LV2</option>
+              <option value="E_H">Eco - Philosophie</option>
+              <option value="E_LV1">Eco - LV1</option>
+              <option value="E_LV2">Eco - LV2</option>
+              <option value="LV1_H">LV1 - Philosophie</option>
+              <option value="LV2_H">LV2 - Philosophie</option>
+              <option value="LV1_LV2">LV1 - LV2</option>
+              <option value="M_P">Maths - Physique</option>
+              <option value="M_SI">Maths - SI</option>
+              <option value="M_S">Maths - SVT</option>
+              <option value="M_F">Maths - Francais</option>
+              <option value="M_H">Maths - Philosophie</option>
+              <option value="M_E">Maths - Eco</option>
+              <option value="M_LV1">Maths - LV1</option>
+              <option value="M_LV2">Maths - LV2</option>
+              <option value="P_SI">Physique - SI</option>
+              <option value="P_SVT">Physique - SVT</option>
+              <option value="P_F">Physique - Francais</option>
+              <option value="P_H">Physique - Philosophie</option>
+              <option value="P_E">Physique - Eco</option>
+              <option value="P_LV1">Physique - LV1</option>
+              <option value="P_LV2">Physique - LV2</option>
+              <option value="S_F">SVT - Francais</option>
+              <option value="S_H">SVT - Philosophie</option>
+              <option value="S_E">SVT - Eco</option>
+              <option value="S_LV1">SVT - LV1</option>
+              <option value="S_LV2">SVT - LV2</option>
+              <option value="SI_F">SI - Francais</option>
+              <option value="SI_H">SI - Philosophie</option>
+              <option value="SI_E">SI - Eco</option>
+              <option value="SI_LV1">SI - LV1</option>
+              <option value="SI_LV2">SI - LV2</option>
+              <option value="F_E">Français - Eco</option>
+              <option value="F_H">Français - Philosophie</option>
+              <option value="F_LV1">Français - LV1</option>
+              <option value="F_LV2">Français - LV2</option>
+              <option value="E_H">Eco - Philosophie</option>
+              <option value="E_LV1">Eco - LV1</option>
+              <option value="E_LV2">Eco - LV2</option>
+              <option value="LV1_H">LV1 - Philosophie</option>
+              <option value="LV2_H">LV2 - Philosophie</option>
+              <option value="LV1_LV2">LV1 - LV2</option>
+          </select>
+          @error('matieresdet')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
               </span>
@@ -191,7 +311,7 @@
           <label for="maths">Ta moyenne en Maths</label>
           <select class="form-control @error('maths') is-invalid @enderror" id="maths" name="maths">
               <option value="{{ old('maths') }}">{{ old('maths') }}</option>
-              <option value="Agressif">Agressif</option>
+              <option value="Agressif"></option>
               <option value="Anxieux">Anxieux</option>
               <option value="Astucieux">Astucieux</option>
               <option value="Arrogant">Arrogant</option>

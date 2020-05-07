@@ -10,7 +10,7 @@ class Profil extends Model implements Authenticatable
 {
     use BasicAuthenticatable;
 
-    protected $fillable = ['user_id', 'niveauetude', 'specialite', 'lv1', 'profileleve', 'ambiancetravail', 'tempstravail', 'methodes', 'matieresfav', 'maths', 'physique', 'svt', 'si', 'eco', 'francais', 'philosophie', 'anglais', 'qualite1', 'qualite2', 'qualite3', 'qualite4', 'qualite5', 'defaut1', 'defaut2', 'defaut3', 'raison', 'detail', 'hobbies', 'domaines', 'domainespe', 'metiers', 'metierspe', 'situation', 'salaire', 'projet', 'equipe', 'stress', 'international', 'admission', 'prix', 'formations', 'formationspe'];
+    protected $fillable = ['user_id', 'niveauetude', 'specialite', 'lv1', 'profileleve', 'ambiancetravail', 'tempstravailsemaine', 'tempstravailwe', 'methodes', 'matieresfav', 'matieresdet', 'maths', 'physique', 'svt', 'si', 'eco', 'francais', 'philosophie', 'anglais', 'qualite1', 'qualite2', 'qualite3', 'qualite4', 'qualite5', 'defaut1', 'defaut2', 'defaut3', 'raison', 'detail', 'hobbies', 'domaines', 'domainespe', 'metiers', 'metierspe', 'situation', 'salaire', 'projet', 'equipe', 'stress', 'international', 'admission', 'prix', 'formations', 'formationspe'];
 
     /**
      * Get the password for the user.

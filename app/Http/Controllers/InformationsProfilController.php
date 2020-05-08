@@ -91,14 +91,14 @@ class InformationsProfilController extends Controller
             'methodes' => ['required', 'string', 'max:255'],
             'matieresfav' => ['required', 'string', 'max:255'],
             'matieresdet' => ['required', 'string', 'max:255'],
-            'maths' => ['required', 'string', 'max:255'],
-            'physique' => ['required', 'string', 'max:255'],
-            'svt' => ['required', 'string', 'max:255'],
-            'si' => ['required', 'string', 'max:255'],
-            'eco' => ['required', 'string', 'max:255'],
-            'francais' => ['required', 'string', 'max:255'],
-            'philosophie' => ['required', 'string', 'max:255'], 
-            'anglais' => ['required', 'string', 'max:255'],
+            'maths' => ['required', 'numeric'],
+            'physique' => ['required', 'numeric'],
+            'svt' => ['required', 'numeric'],
+            'si' => ['required', 'numeric'],
+            'eco' => ['required', 'numeric'],
+            'francais' => ['required', 'numeric'],
+            'philosophie' => ['required', 'numeric'],
+            'anglais' =>['required', 'numeric'],
         ]);
         
         $utilisateurs = Utilisateur::where('id', '=',Auth::user()->id)->first();

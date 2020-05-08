@@ -105,7 +105,7 @@
          </div>
         </div>
 
-        <div class="form-group" id="champtempssemaine" style="display:none">
+        <div class="form-group" id="champtempstravailsemaine" style="display:none">
          <div class="col-auto">
           <label for="tempstravailsemaine">Ton temps de travail personnel en semaine</label>
           <select class="form-control @error('tempstravailsemaine') is-invalid @enderror" id="tempstravailsemaine" name="tempstravailsemaine">
@@ -224,79 +224,19 @@
 
         <div class="form-group" id="champmatieresdet" style="display:none">
          <div class="col-auto">
-          <label for="matieresdet">Quelles sont les matières que tu détestes ?</label>
+          <label for="matieresdet">Une matière que tu détestes ?</label>
           <select class="form-control @error('matieresdet') is-invalid @enderror" id="matieresdet" name="matieresdet">
               <option value="{{ old('matieresdet') }}">{{ old('matieresdet') }}</option>
               <option value="aucune">Aucune</option>
-              <option value="M_SI">Maths - SI</option>
-              <option value="M_S">Maths - SVT</option>
-              <option value="M_F">Maths - Francais</option>
-              <option value="M_H">Maths - Philosophie</option>
-              <option value="M_E">Maths - Eco</option>
-              <option value="M_LV1">Maths - LV1</option>
-              <option value="M_LV2">Maths - LV2</option>
-              <option value="P_SI">Physique - SI</option>
-              <option value="P_SVT">Physique - SVT</option>
-              <option value="P_F">Physique - Francais</option>
-              <option value="P_H">Physique - Philosophie</option>
-              <option value="P_E">Physique - Eco</option>
-              <option value="P_LV1">Physique - LV1</option>
-              <option value="P_LV2">Physique - LV2</option>
-              <option value="S_F">SVT - Francais</option>
-              <option value="S_H">SVT - Philosophie</option>
-              <option value="S_E">SVT - Eco</option>
-              <option value="S_LV1">SVT - LV1</option>
-              <option value="S_LV2">SVT - LV2</option>
-              <option value="SI_F">SI - Francais</option>
-              <option value="SI_H">SI - Philosophie</option>
-              <option value="SI_E">SI - Eco</option>
-              <option value="SI_LV1">SI - LV1</option>
-              <option value="SI_LV2">SI - LV2</option>
-              <option value="F_E">Français - Eco</option>
-              <option value="F_H">Français - Philosophie</option>
-              <option value="F_LV1">Français - LV1</option>
-              <option value="F_LV2">Français - LV2</option>
-              <option value="E_H">Eco - Philosophie</option>
-              <option value="E_LV1">Eco - LV1</option>
-              <option value="E_LV2">Eco - LV2</option>
-              <option value="LV1_H">LV1 - Philosophie</option>
-              <option value="LV2_H">LV2 - Philosophie</option>
-              <option value="LV1_LV2">LV1 - LV2</option>
-              <option value="M_P">Maths - Physique</option>
-              <option value="M_SI">Maths - SI</option>
-              <option value="M_S">Maths - SVT</option>
-              <option value="M_F">Maths - Francais</option>
-              <option value="M_H">Maths - Philosophie</option>
-              <option value="M_E">Maths - Eco</option>
-              <option value="M_LV1">Maths - LV1</option>
-              <option value="M_LV2">Maths - LV2</option>
-              <option value="P_SI">Physique - SI</option>
-              <option value="P_SVT">Physique - SVT</option>
-              <option value="P_F">Physique - Francais</option>
-              <option value="P_H">Physique - Philosophie</option>
-              <option value="P_E">Physique - Eco</option>
-              <option value="P_LV1">Physique - LV1</option>
-              <option value="P_LV2">Physique - LV2</option>
-              <option value="S_F">SVT - Francais</option>
-              <option value="S_H">SVT - Philosophie</option>
-              <option value="S_E">SVT - Eco</option>
-              <option value="S_LV1">SVT - LV1</option>
-              <option value="S_LV2">SVT - LV2</option>
-              <option value="SI_F">SI - Francais</option>
-              <option value="SI_H">SI - Philosophie</option>
-              <option value="SI_E">SI - Eco</option>
-              <option value="SI_LV1">SI - LV1</option>
-              <option value="SI_LV2">SI - LV2</option>
-              <option value="F_E">Français - Eco</option>
-              <option value="F_H">Français - Philosophie</option>
-              <option value="F_LV1">Français - LV1</option>
-              <option value="F_LV2">Français - LV2</option>
-              <option value="E_H">Eco - Philosophie</option>
-              <option value="E_LV1">Eco - LV1</option>
-              <option value="E_LV2">Eco - LV2</option>
-              <option value="LV1_H">LV1 - Philosophie</option>
-              <option value="LV2_H">LV2 - Philosophie</option>
-              <option value="LV1_LV2">LV1 - LV2</option>
+              <option value="M">Maths</option>
+              <option value="P">Physique</option>
+              <option value="SVT">SVT</option>
+              <option value="SI">SI</option>
+              <option value="F">Français</option>
+              <option value="H">Philosophie</option>
+              <option value="E">Eco</option>
+              <option value="LV1">LV1</option>
+              <option value="LV2">LV2</option>
           </select>
           @error('matieresdet')
               <span class="invalid-feedback" role="alert">
@@ -309,17 +249,7 @@
         <div class="form-group" id="champmaths" style="display:none">
          <div class="col-auto">
           <label for="maths">Ta moyenne en Maths</label>
-          <select class="form-control @error('maths') is-invalid @enderror" id="maths" name="maths">
-              <option value="{{ old('maths') }}">{{ old('maths') }}</option>
-              <option value="Agressif"></option>
-              <option value="Anxieux">Anxieux</option>
-              <option value="Astucieux">Astucieux</option>
-              <option value="Arrogant">Arrogant</option>
-              <option value="Assiste">Assisté</option>
-              <option value="Autoritaire">Autoritaire</option>
-              <option value="Bavard">Bavard</option>
-              <option value="Blessant">Blessant</option>
-          </select>
+          <input type="text" class="form-control @error('maths') is-invalid @enderror" id="maths" name="maths" value="{{ old('maths') }}">
           @error('maths')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -331,17 +261,7 @@
         <div class="form-group" id="champphysique" style="display:none">
          <div class="col-auto">
           <label for="physique">Ta moyenne en Physique</label>
-          <select class="form-control @error('physique') is-invalid @enderror" value="{{ old('physique') }}" id="physique" name="physique">
-              <option value="{{ old('physique') }}">{{ old('physique') }}</option>
-              <option value="Agressif">Agressif</option>
-              <option value="Anxieux">Anxieux</option>
-              <option value="Astucieux">Astucieux</option>
-              <option value="Arrogant">Arrogant</option>
-              <option value="Assiste">Assisté</option>
-              <option value="Autoritaire">Autoritaire</option>
-              <option value="Bavard">Bavard</option>
-              <option value="Blessant">Blessant</option>
-          </select>
+          <input type="text" class="form-control @error('physique') is-invalid @enderror" value="{{ old('physique') }}" id="physique" name="physique">
           @error('physique')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -353,17 +273,7 @@
         <div class="form-group" id="champsvt" style="display:none">
          <div class="col-auto">
           <label for="svt">Ta moyenne en SVT</label>
-          <select class="form-control @error('svt') is-invalid @enderror" value="{{ old('svt') }}" id="svt" name="svt">
-              <option value="{{ old('svt') }}">{{ old('svt') }}</option>
-              <option value="Agressif">Agressif</option>
-              <option value="Anxieux">Anxieux</option>
-              <option value="Astucieux">Astucieux</option>
-              <option value="Arrogant">Arrogant</option>
-              <option value="Assiste">Assisté</option>
-              <option value="Autoritaire">Autoritaire</option>
-              <option value="Bavard">Bavard</option>
-              <option value="Blessant">Blessant</option>
-          </select>
+          <input type="text" class="form-control @error('svt') is-invalid @enderror" value="{{ old('svt') }}" id="svt" name="svt">
           @error('svt')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -375,17 +285,7 @@
         <div class="form-group" id="champsi" style="display:none">
          <div class="col-auto">
           <label for="si">Ta moyenne en SI</label>
-          <select class="form-control @error('si') is-invalid @enderror" value="{{ old('si') }}" id="si" name="si">
-              <option value="{{ old('si') }}">{{ old('si') }}</option>
-              <option value="Agressif">Agressif</option>
-              <option value="Anxieux">Anxieux</option>
-              <option value="Astucieux">Astucieux</option>
-              <option value="Arrogant">Arrogant</option>
-              <option value="Assiste">Assisté</option>
-              <option value="Autoritaire">Autoritaire</option>
-              <option value="Bavard">Bavard</option>
-              <option value="Blessant">Blessant</option>
-          </select>
+          <input type="text" class="form-control @error('si') is-invalid @enderror" value="{{ old('si') }}" id="si" name="si">
           @error('si')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -397,17 +297,7 @@
         <div class="form-group" id="champeco" style="display:none">
          <div class="col-auto">
           <label for="eco">Ta moyenne en Economie</label>
-          <select class="form-control @error('eco') is-invalid @enderror" value="{{ old('eco') }}" id="eco" name="eco">
-              <option value="{{ old('eco') }}">{{ old('eco') }}</option>
-              <option value="Agressif">Agressif</option>
-              <option value="Anxieux">Anxieux</option>
-              <option value="Astucieux">Astucieux</option>
-              <option value="Arrogant">Arrogant</option>
-              <option value="Assiste">Assisté</option>
-              <option value="Autoritaire">Autoritaire</option>
-              <option value="Bavard">Bavard</option>
-              <option value="Blessant">Blessant</option>
-          </select>
+          <input type="text" class="form-control @error('eco') is-invalid @enderror" value="{{ old('eco') }}" id="eco" name="eco">
           @error('eco')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -419,17 +309,7 @@
         <div class="form-group" id="champfrancais" style="display:none">
          <div class="col-auto">
           <label for="francais">Ta moyenne en Français</label>
-          <select class="form-control @error('francais') is-invalid @enderror" value="{{ old('francais') }}" id="francais" name="francais">
-              <option value="{{ old('francais') }}">{{ old('maths') }}</option>
-              <option value="Agressif">Agressif</option>
-              <option value="Anxieux">Anxieux</option>
-              <option value="Astucieux">Astucieux</option>
-              <option value="Arrogant">Arrogant</option>
-              <option value="Assiste">Assisté</option>
-              <option value="Autoritaire">Autoritaire</option>
-              <option value="Bavard">Bavard</option>
-              <option value="Blessant">Blessant</option>
-          </select>
+          <input type="text" class="form-control @error('francais') is-invalid @enderror" value="{{ old('francais') }}" id="francais" name="francais">
           @error('francais')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -441,17 +321,7 @@
         <div class="form-group" id="champphilosophie" style="display:none">
          <div class="col-auto">
           <label for="philosophie">Ta moyenne en Philosophie</label>
-          <select class="form-control @error('philosophie') is-invalid @enderror" id="philosophie" name="philosophie">
-              <option value="{{ old('philosophie') }}">{{ old('philosophie') }}</option>
-              <option value="Agressif">Agressif</option>
-              <option value="Anxieux">Anxieux</option>
-              <option value="Astucieux">Astucieux</option>
-              <option value="Arrogant">Arrogant</option>
-              <option value="Assiste">Assisté</option>
-              <option value="Autoritaire">Autoritaire</option>
-              <option value="Bavard">Bavard</option>
-              <option value="Blessant">Blessant</option>
-          </select>
+          <input type="text" class="form-control @error('philosophie') is-invalid @enderror" id="philosophie" name="philosophie">
           @error('philosophie')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -463,17 +333,7 @@
         <div class="form-group" id="champanglais" style="display:none">
          <div class="col-auto">
           <label for="anglais">Ta moyenne en Anglais</label>
-          <select class="form-control @error('anglais') is-invalid @enderror" id="anglais" name="anglais">
-              <option value="{{ old('anglais') }}">{{ old('anglais') }}</option>
-              <option value="Agressif">Agressif</option>
-              <option value="Anxieux">Anxieux</option>
-              <option value="Astucieux">Astucieux</option>
-              <option value="Arrogant">Arrogant</option>
-              <option value="Assiste">Assisté</option>
-              <option value="Autoritaire">Autoritaire</option>
-              <option value="Bavard">Bavard</option>
-              <option value="Blessant">Blessant</option>
-          </select>
+          <input type="text" class="form-control @error('anglais') is-invalid @enderror" id="anglais" name="anglais">
           @error('anglais')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>

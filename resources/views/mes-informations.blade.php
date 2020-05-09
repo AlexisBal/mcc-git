@@ -72,7 +72,7 @@
          <div class="col-auto">
           <label for="profileleve">Quel type d'élève es-tu ?</label>
           <select class="form-control @error('profileleve') is-invalid @enderror" id="profileleve" name="profileleve">
-              <option value="{{ old('profileleve') }}">{{ old('profileleve') }}</option>
+              <option value="{{ old('profileleve') }}">{{ $profileleve }}</option>
               <option value="S_T_T">Sérieux, travailleur mais timide</option>
               <option value="S_T_B">Sérieux, travailleur mais bavard</option>
               <option value="F_T">Possède des facilités et travaille</option>
@@ -132,7 +132,7 @@
          <div class="col-auto">
           <label for="tempstravailwe">Ton temps de travail personnel le weekend</label>
           <select class="form-control @error('tempstravailwe') is-invalid @enderror" id="tempstravailwe" name="tempstravailwe">
-              <option value="{{ old('tempstravailwe') }}">{{ old('tempstravail') }}</option>
+              <option value="{{ old('tempstravailwe') }}">{{ old('tempstravailwe') }}</option>
               <option value="30min">30min</option>
               <option value="1h">1h</option>
               <option value="2h">2h</option>
@@ -157,7 +157,7 @@
          <div class="col-auto">
           <label for="methodes">Quels sont tes méthodes de travail ?</label>
           <select class="form-control @error('methodes') is-invalid @enderror" id="methodes" name="methodes">
-              <option value="{{ old('methodes') }}">{{ old('methodes') }}</option>
+              <option value="{{ old('methodes') }}">{{ $methodes }}</option>
               <option value="F_R">Je fais des fiches et travaille mes cours tous les soirs</option>
               <option value="F_NR">Je fais des fiches mais ne travaille pas mes cours tous les soirs</option>
               <option value="NF_R">Je ne fais pas de fiches mais travaille mes cours tous les soirs</option>
@@ -175,7 +175,7 @@
          <div class="col-auto">
           <label for="matieresfav">Quelles sont tes 2 matières favorites ?</label>
           <select class="form-control @error('matieresfav') is-invalid @enderror" id="matieresfav" name="matieresfav">
-              <option value="{{ old('matieresfav') }}">{{ old('matieresfav') }}</option>
+              <option value="{{ old('matieresfav') }}">{{ $matieresfav }}</option>
               <option value="M_P">Maths - Physique</option>
               <option value="M_SI">Maths - SI</option>
               <option value="M_S">Maths - SVT</option>
@@ -211,8 +211,6 @@
               <option value="LV1_H">LV1 - Philosophie</option>
               <option value="LV2_H">LV2 - Philosophie</option>
               <option value="LV1_LV2">LV1 - LV2</option>
-            
-
           </select>
           @error('matieresfav')
               <span class="invalid-feedback" role="alert">
@@ -226,7 +224,7 @@
          <div class="col-auto">
           <label for="matieresdet">Une matière que tu détestes ?</label>
           <select class="form-control @error('matieresdet') is-invalid @enderror" id="matieresdet" name="matieresdet">
-              <option value="{{ old('matieresdet') }}">{{ old('matieresdet') }}</option>
+              <option value="{{ old('matieresdet') }}">{{ $matieresdet }}</option>
               <option value="aucune">Aucune</option>
               <option value="M">Maths</option>
               <option value="P">Physique</option>
@@ -249,7 +247,17 @@
         <div class="form-group" id="champmaths" style="display:none">
          <div class="col-auto">
           <label for="maths">Ta moyenne en Maths</label>
-          <input type="text" class="form-control @error('maths') is-invalid @enderror" id="maths" name="maths" value="{{ old('maths') }}">
+          <select class="form-control @error('maths') is-invalid @enderror" id="maths" name="maths" value="{{ old('maths') }}">
+              <option value="{{ old('maths') }}">{{ old('maths') }}</option>
+              <option value="0-5">Entre 0 et 5</option>
+              <option value="5-8">Entre 5 et 8</option>
+              <option value="8-10">Entre 8 et 10</option>
+              <option value="10-12">Entre 10 et 12</option>
+              <option value="12-14">Entre 12 et 14</option>
+              <option value="14-16">Entre 14 et 16</option>
+              <option value="16-18">Entre 16 et 18</option>
+              <option value="18-20">Entre 18 et 20</option>
+          </select>
           @error('maths')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -261,7 +269,17 @@
         <div class="form-group" id="champphysique" style="display:none">
          <div class="col-auto">
           <label for="physique">Ta moyenne en Physique</label>
-          <input type="text" class="form-control @error('physique') is-invalid @enderror" value="{{ old('physique') }}" id="physique" name="physique">
+          <select class="form-control @error('physique') is-invalid @enderror" value="{{ old('physique') }}" id="physique" name="physique">
+              <option value="{{ old('physique') }}">{{ old('physique') }}</option>
+              <option value="0-5">Entre 0 et 5</option>
+              <option value="5-8">Entre 5 et 8</option>
+              <option value="8-10">Entre 8 et 10</option>
+              <option value="10-12">Entre 10 et 12</option>
+              <option value="12-14">Entre 12 et 14</option>
+              <option value="14-16">Entre 14 et 16</option>
+              <option value="16-18">Entre 16 et 18</option>
+              <option value="18-20">Entre 18 et 20</option>
+          </select>
           @error('physique')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -273,7 +291,17 @@
         <div class="form-group" id="champsvt" style="display:none">
          <div class="col-auto">
           <label for="svt">Ta moyenne en SVT</label>
-          <input type="text" class="form-control @error('svt') is-invalid @enderror" value="{{ old('svt') }}" id="svt" name="svt">
+          <select class="form-control @error('svt') is-invalid @enderror" value="{{ old('svt') }}" id="svt" name="svt">
+              <option value="{{ old('svt') }}">{{ old('svt') }}</option>
+              <option value="0-5">Entre 0 et 5</option>
+              <option value="5-8">Entre 5 et 8</option>
+              <option value="8-10">Entre 8 et 10</option>
+              <option value="10-12">Entre 10 et 12</option>
+              <option value="12-14">Entre 12 et 14</option>
+              <option value="14-16">Entre 14 et 16</option>
+              <option value="16-18">Entre 16 et 18</option>
+              <option value="18-20">Entre 18 et 20</option>
+          </select>
           @error('svt')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -285,7 +313,17 @@
         <div class="form-group" id="champsi" style="display:none">
          <div class="col-auto">
           <label for="si">Ta moyenne en SI</label>
-          <input type="text" class="form-control @error('si') is-invalid @enderror" value="{{ old('si') }}" id="si" name="si">
+          <select class="form-control @error('si') is-invalid @enderror" value="{{ old('si') }}" id="si" name="si">
+              <option value="{{ old('si') }}">{{ old('si') }}</option>
+              <option value="0-5">Entre 0 et 5</option>
+              <option value="5-8">Entre 5 et 8</option>
+              <option value="8-10">Entre 8 et 10</option>
+              <option value="10-12">Entre 10 et 12</option>
+              <option value="12-14">Entre 12 et 14</option>
+              <option value="14-16">Entre 14 et 16</option>
+              <option value="16-18">Entre 16 et 18</option>
+              <option value="18-20">Entre 18 et 20</option>
+          </select>
           @error('si')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -296,8 +334,18 @@
 
         <div class="form-group" id="champeco" style="display:none">
          <div class="col-auto">
-          <label for="eco">Ta moyenne en Economie</label>
-          <input type="text" class="form-control @error('eco') is-invalid @enderror" value="{{ old('eco') }}" id="eco" name="eco">
+          <label for="eco">Ta moyenne en Economie</label> 
+          <select class="form-control @error('eco') is-invalid @enderror" value="{{ old('eco') }}" id="eco" name="eco">
+              <option value="{{ old('eco') }}">{{ old('eco') }}</option>
+              <option value="0-5">Entre 0 et 5</option>
+              <option value="5-8">Entre 5 et 8</option>
+              <option value="8-10">Entre 8 et 10</option>
+              <option value="10-12">Entre 10 et 12</option>
+              <option value="12-14">Entre 12 et 14</option>
+              <option value="14-16">Entre 14 et 16</option>
+              <option value="16-18">Entre 16 et 18</option>
+              <option value="18-20">Entre 18 et 20</option>
+          </select>
           @error('eco')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -309,7 +357,17 @@
         <div class="form-group" id="champfrancais" style="display:none">
          <div class="col-auto">
           <label for="francais">Ta moyenne en Français</label>
-          <input type="text" class="form-control @error('francais') is-invalid @enderror" value="{{ old('francais') }}" id="francais" name="francais">
+          <select class="form-control @error('francais') is-invalid @enderror" value="{{ old('francais') }}" id="francais" name="francais">
+              <option value="{{ old('francais') }}">{{ old('francais') }}</option>
+              <option value="0-5">Entre 0 et 5</option>
+              <option value="5-8">Entre 5 et 8</option>
+              <option value="8-10">Entre 8 et 10</option>
+              <option value="10-12">Entre 10 et 12</option>
+              <option value="12-14">Entre 12 et 14</option>
+              <option value="14-16">Entre 14 et 16</option>
+              <option value="16-18">Entre 16 et 18</option>
+              <option value="18-20">Entre 18 et 20</option>
+          </select>
           @error('francais')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -321,7 +379,17 @@
         <div class="form-group" id="champphilosophie" style="display:none">
          <div class="col-auto">
           <label for="philosophie">Ta moyenne en Philosophie</label>
-          <input type="text" class="form-control @error('philosophie') is-invalid @enderror" id="philosophie" name="philosophie">
+          <select class="form-control @error('philosophie') is-invalid @enderror" id="philosophie" name="philosophie">
+              <option value="{{ old('philosophie') }}">{{ old('philosophie') }}</option>
+              <option value="0-5">Entre 0 et 5</option>
+              <option value="5-8">Entre 5 et 8</option>
+              <option value="8-10">Entre 8 et 10</option>
+              <option value="10-12">Entre 10 et 12</option>
+              <option value="12-14">Entre 12 et 14</option>
+              <option value="14-16">Entre 14 et 16</option>
+              <option value="16-18">Entre 16 et 18</option>
+              <option value="18-20">Entre 18 et 20</option>
+          </select>
           @error('philosophie')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -333,7 +401,17 @@
         <div class="form-group" id="champanglais" style="display:none">
          <div class="col-auto">
           <label for="anglais">Ta moyenne en Anglais</label>
-          <input type="text" class="form-control @error('anglais') is-invalid @enderror" id="anglais" name="anglais">
+          <select class="form-control @error('anglais') is-invalid @enderror" id="anglais" name="anglais">
+              <option value="{{ old('anglais') }}">{{ old('anglais') }}</option>
+              <option value="0-5">Entre 0 et 5</option>
+              <option value="5-8">Entre 5 et 8</option>
+              <option value="8-10">Entre 8 et 10</option>
+              <option value="10-12">Entre 10 et 12</option>
+              <option value="12-14">Entre 12 et 14</option>
+              <option value="14-16">Entre 14 et 16</option>
+              <option value="16-18">Entre 16 et 18</option>
+              <option value="18-20">Entre 18 et 20</option>
+          </select>
           @error('anglais')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>

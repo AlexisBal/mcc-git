@@ -49573,7 +49573,7 @@ $(document).ready(function () {
         $("#champphilosophie").fadeIn("slow");
       });
       $("#philosophie").change(function () {
-        $("#anglais").show();
+        $("#champanglais").fadeIn("slow");
         $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
@@ -49583,10 +49583,17 @@ $(document).ready(function () {
     if (specialite1 == "m_s_h") {
       $("#champmaths").fadeIn("slow");
       $("#maths").change(function () {
-        $("#champsvt").show();
+        $("#champsvt").fadeIn("slow");
       });
       $("#svt").change(function () {
-        $("#champfrancais").show();
+        $("#champfrancais").fadeIn("slow");
+      });
+      $("#francais").change(function () {
+        $("#champphilosophie").fadeIn("slow");
+      });
+      $("#philosophie").change(function () {
+        $("#champanglais").fadeIn("slow");
+        $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
 
@@ -49595,10 +49602,17 @@ $(document).ready(function () {
     if (specialite1 == "m_p_sp") {
       $("#champmaths").fadeIn("slow");
       $("#maths").change(function () {
-        $("#champphysique").show();
+        $("#champphysique").fadeIn("slow");
       });
       $("#physique").change(function () {
-        $("#champfrancais").show();
+        $("#champfrancais").fadeIn("slow");
+      });
+      $("#francais").change(function () {
+        $("#champphilosophie").fadeIn("slow");
+      });
+      $("#philosophie").change(function () {
+        $("#champanglais").fadeIn("slow");
+        $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
 
@@ -49607,13 +49621,20 @@ $(document).ready(function () {
     if (specialite1 == "m_es_s") {
       $("#champmaths").fadeIn("slow");
       $("#maths").change(function () {
-        $("#champeco").show();
+        $("#champeco").fadeIn("slow");
       });
       $("#eco").change(function () {
-        $("#champsvt").show();
+        $("#champsvt").fadeIn("slow");
       });
       $("#svt").change(function () {
-        $("#champfrancais").show();
+        $("#champfrancais").fadeIn("slow");
+      });
+      $("#francais").change(function () {
+        $("#champphilosophie").fadeIn("slow");
+      });
+      $("#philosophie").change(function () {
+        $("#champanglais").fadeIn("slow");
+        $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
 
@@ -49622,13 +49643,20 @@ $(document).ready(function () {
     if (specialite1 == "m_es_p") {
       $("#champmaths").fadeIn("slow");
       $("#maths").change(function () {
-        $("#champeco").show();
+        $("#champeco").fadeIn("slow");
       });
       $("#eco").change(function () {
-        $("#champphysique").show();
+        $("#champphysique").fadeIn("slow");
       });
       $("#physique").change(function () {
-        $("#champfrancais").show();
+        $("#champfrancais").fadeIn("slow");
+      });
+      $("#francais").change(function () {
+        $("#champphilosophie").fadeIn("slow");
+      });
+      $("#philosophie").change(function () {
+        $("#champanglais").fadeIn("slow");
+        $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
 
@@ -49637,10 +49665,17 @@ $(document).ready(function () {
     if (specialite1 == "m_es_lv") {
       $("#champmaths").fadeIn("slow");
       $("#maths").change(function () {
-        $("#champeco").show();
+        $("#champeco").fadeIn("slow");
       });
       $("#eco").change(function () {
-        $("#francais").show();
+        $("#champfrancais").fadeIn("slow");
+      });
+      $("#francais").change(function () {
+        $("#champphilosophie").fadeIn("slow");
+      });
+      $("#philosophie").change(function () {
+        $("#champanglais").fadeIn("slow");
+        $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
 
@@ -49649,83 +49684,116 @@ $(document).ready(function () {
     if (specialite1 == "m_p_lv") {
       $("#champmaths").fadeIn("slow");
       $("#maths").change(function () {
-        $("#champphysique").show();
+        $("#champphysique").fadeIn("slow");
       });
-      $("#champphysique").fadeIn("slow");
-      $("#champfrancais").fadeIn("slow");
-      $("#champphilosophie").fadeIn("slow");
-      $("#champanglais").fadeIn("slow");
-      $("#champ_bouton_profil_1").fadeIn("slow");
+      $("#physique").change(function () {
+        $("#champfrancais").fadeIn("slow");
+      });
+      $("#francais").change(function () {
+        $("#champphilosophie").fadeIn("slow");
+      });
+      $("#philosophie").change(function () {
+        $("#champanglais").fadeIn("slow");
+        $("#champ_bouton_profil_1").fadeIn("slow");
+      });
     }
 
     ;
 
     if (specialite1 == "m_es_sp") {
-      $("#maths").change(function () {
-        $("#champeco").show();
-      });
       $("#champmaths").fadeIn("slow");
-      $("#champeco").fadeIn("slow");
-      $("#champfrancais").fadeIn("slow");
-      $("#champphilosophie").fadeIn("slow");
-      $("#champanglais").fadeIn("slow");
-      $("#champ_bouton_profil_1").fadeIn("slow");
+      $("#maths").change(function () {
+        $("#champeco").fadeIn("slow");
+      });
+      $("#eco").change(function () {
+        $("#champfrancais").fadeIn("slow");
+      });
+      $("#francais").change(function () {
+        $("#champphilosophie").fadeIn("slow");
+      });
+      $("#philosophie").change(function () {
+        $("#champanglais").fadeIn("slow");
+        $("#champ_bouton_profil_1").fadeIn("slow");
+      });
     }
 
     ;
 
     if (specialite1 == "m_p_si") {
-      $("#maths").change(function () {
-        $("#champeco").show();
-      });
       $("#champmaths").fadeIn("slow");
-      $("#champphysique").fadeIn("slow");
-      $("#champsi").fadeIn("slow");
-      $("#champfrancais").fadeIn("slow");
-      $("#champphilosophie").fadeIn("slow");
-      $("#champanglais").fadeIn("slow");
-      $("#champ_bouton_profil_1").fadeIn("slow");
+      $("#maths").change(function () {
+        $("#champeco").fadeIn("slow");
+      });
+      $("#eco").change(function () {
+        $("#champphysique").fadeIn("slow");
+      });
+      $("#physique").change(function () {
+        $("#champsi").fadeIn("slow");
+      });
+      $("#si").change(function () {
+        $("#champfrancais").fadeIn("slow");
+      });
+      $("#francais").change(function () {
+        $("#champphilosophie").fadeIn("slow");
+      });
+      $("#philosophie").change(function () {
+        $("#champanglais").fadeIn("slow");
+        $("#champ_bouton_profil_1").fadeIn("slow");
+      });
     }
 
     ;
 
     if (specialite1 == "m_p_s") {
-      $("#maths").change(function () {
-        $("#champeco").show();
-      });
       $("#champmaths").fadeIn("slow");
-      $("#champphysique").fadeIn("slow");
-      $("#champsvt").fadeIn("slow");
-      $("#champfrancais").fadeIn("slow");
-      $("#champphilosophie").fadeIn("slow");
-      $("#champanglais").fadeIn("slow");
-      $("#champ_bouton_profil_1").fadeIn("slow");
+      $("#maths").change(function () {
+        $("#champphysique").fadeIn("slow");
+      });
+      $("#physique").change(function () {
+        $("#champsvt").fadeIn("slow");
+      });
+      $("#svt").change(function () {
+        $("#champfrancais").fadeIn("slow");
+      });
+      $("#francais").change(function () {
+        $("#champphilosophie").fadeIn("slow");
+      });
+      $("#philosophie").change(function () {
+        $("#champanglais").fadeIn("slow");
+        $("#champ_bouton_profil_1").fadeIn("slow");
+      });
     }
 
     ;
 
     if (specialite1 == "sp_es_lv") {
-      $("#maths").change(function () {
-        $("#champeco").show();
-      });
       $("#champeco").fadeIn("slow");
-      $("#champfrancais").fadeIn("slow");
-      $("#champphilosophie").fadeIn("slow");
-      $("#champanglais").fadeIn("slow");
-      $("#champ_bouton_profil_1").fadeIn("slow");
+      $("#eco").change(function () {
+        $("#champfrancais").fadeIn("slow");
+      });
+      $("#francais").change(function () {
+        $("#champphilosophie").fadeIn("slow");
+      });
+      $("#philosophie").change(function () {
+        $("#champanglais").fadeIn("slow");
+        $("#champ_bouton_profil_1").fadeIn("slow");
+      });
     }
 
     ;
 
     if (specialite1 == "sp_h_es") {
-      $("#maths").change(function () {
-        $("#champeco").show();
-      });
       $("#champeco").fadeIn("slow");
-      $("#champfrancais").fadeIn("slow");
-      $("#champphilosophie").fadeIn("slow");
-      $("#champanglais").fadeIn("slow");
-      $("#champ_bouton_profil_1").fadeIn("slow");
+      $("#eco").change(function () {
+        $("#champfrancais").fadeIn("slow");
+      });
+      $("#francais").change(function () {
+        $("#champphilosophie").fadeIn("slow");
+      });
+      $("#philosophie").change(function () {
+        $("#champanglais").fadeIn("slow");
+        $("#champ_bouton_profil_1").fadeIn("slow");
+      });
     }
 
     ;
@@ -49740,6 +49808,7 @@ $(document).ready(function () {
 
   if (specialite != "") {
     $("#champspe").attr("style", "display:yes");
+    $("#champ_bouton_profil_1").attr("style", "display:yes");
   }
 
   ;
@@ -49768,6 +49837,7 @@ $(document).ready(function () {
 
   if (tempstravailsemaine != "") {
     $("#champtempstravailsemaine").attr("style", "display:yes");
+    $("#champ_bouton_profil_1").attr("style", "display:yes");
   }
 
   ;
@@ -49817,6 +49887,7 @@ $(document).ready(function () {
 
   if (svt != "") {
     $("#champsvt").attr("style", "display:yes");
+    $("#champ_bouton_profil_1").attr("style", "display:yes");
   }
 
   ;

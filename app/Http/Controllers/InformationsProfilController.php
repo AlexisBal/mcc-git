@@ -279,12 +279,277 @@ class InformationsProfilController extends Controller
             $matieresdet = "Economie";
         }
 
+        if ($moyennemaths == "0-5") {
+            $moyennemaths = "Entre 0 et 5";
+        }
+
+        if ($moyennemaths == "5-8") {
+            $moyennemaths = "Entre 5 et 8";
+        }
+
+        if ($moyennemaths == "8-10") {
+            $moyennemaths = "Entre 8 et 10";
+        }
+
+        if ($moyennemaths == "10-12") {
+            $moyennemaths = "Entre 10 et 12";
+        }
+
+        if ($moyennemaths == "12-14") {
+            $moyennemaths = "Entre 12 et 14";
+        }
+
+        if ($moyennemaths == "14-16") {
+            $moyennemaths = "Entre 14 et 16";
+        }
+
+        if ($moyennemaths == "16-18") {
+            $moyennemaths = "Entre 16 et 18";
+        }
+
+        if ($moyennemaths == "18-20") {
+            $moyennemaths = "Entre 18 et 20";
+        }
+
+        if ($moyennephysique == "0-5") {
+            $moyennephysique = "Entre 0 et 5";
+        }
+
+        if ($moyennephysique == "5-8") {
+            $moyennephysique = "Entre 5 et 8";
+        }
+
+        if ($moyennephysique == "8-10") {
+            $moyennephysique = "Entre 8 et 10";
+        }
+
+        if ($moyennephysique == "10-12") {
+            $moyennephysique = "Entre 10 et 12";
+        }
+
+        if ($moyennephysique == "12-14") {
+            $moyennephysique = "Entre 12 et 14";
+        }
+
+        if ($moyennephysique == "14-16") {
+            $moyennephysique = "Entre 14 et 16";
+        }
+
+        if ($moyennephysique == "16-18") {
+            $moyennephysique = "Entre 16 et 18";
+        }
+
+        if ($moyennephysique == "18-20") {
+            $moyennephysique = "Entre 18 et 20";
+        }
+
+        if ($moyennesvt == "0-5") {
+            $moyennesvt = "Entre 0 et 5";
+        }
+
+        if ($moyennesvt == "5-8") {
+            $moyennesvt = "Entre 5 et 8";
+        }
+
+        if ($moyennesvt == "8-10") {
+            $moyennesvt = "Entre 8 et 10";
+        }
+
+        if ($moyennesvt == "10-12") {
+            $moyennesvt = "Entre 10 et 12";
+        }
+
+        if ($moyennesvt == "12-14") {
+            $moyennesvt = "Entre 12 et 14";
+        }
+
+        if ($moyennesvt == "14-16") {
+            $moyennesvt = "Entre 14 et 16";
+        }
+
+        if ($moyennesvt == "16-18") {
+            $moyennesvt = "Entre 16 et 18";
+        }
+
+        if ($moyennesvt == "18-20") {
+            $moyennesvt = "Entre 18 et 20";
+        }
+
+        if ($moyennesi == "0-5") {
+            $moyennesi = "Entre 0 et 5";
+        }
+
+        if ($moyennesi == "5-8") {
+            $moyennesi = "Entre 5 et 8";
+        }
+
+        if ($moyennesi == "8-10") {
+            $moyennesi = "Entre 8 et 10";
+        }
+
+        if ($moyennesi == "10-12") {
+            $moyennesi = "Entre 10 et 12";
+        }
+
+        if ($moyennesi == "12-14") {
+            $moyennesi = "Entre 12 et 14";
+        }
+
+        if ($moyennesi == "14-16") {
+            $moyennesi = "Entre 14 et 16";
+        }
+
+        if ($moyennesi == "16-18") {
+            $moyennesi = "Entre 16 et 18";
+        }
+
+        if ($moyennesi == "18-20") {
+            $moyennesi = "Entre 18 et 20";
+        }
+
+        if ($moyenneeco == "0-5") {
+            $moyenneeco = "Entre 0 et 5";
+        }
+
+        if ($moyenneeco == "5-8") {
+            $moyenneeco = "Entre 5 et 8";
+        }
+
+        if ($moyenneeco == "8-10") {
+            $moyenneeco = "Entre 8 et 10";
+        }
+
+        if ($moyenneeco == "10-12") {
+            $moyenneeco = "Entre 10 et 12";
+        }
+
+        if ($moyenneeco == "12-14") {
+            $moyenneeco = "Entre 12 et 14";
+        }
+
+        if ($moyenneeco == "14-16") {
+            $moyenneeco = "Entre 14 et 16";
+        }
+
+        if ($moyenneeco == "16-18") {
+            $moyenneeco = "Entre 16 et 18";
+        }
+
+        if ($moyenneeco == "18-20") {
+            $moyenneeco = "Entre 18 et 20";
+        }
+
+        if ($moyennefrancais == "0-5") {
+            $moyennefrancais = "Entre 0 et 5";
+        }
+
+        if ($moyennefrancais == "5-8") {
+            $moyennefrancais = "Entre 5 et 8";
+        }
+
+        if ($moyennefrancais == "8-10") {
+            $moyennefrancais = "Entre 8 et 10";
+        }
+
+        if ($moyennefrancais == "10-12") {
+            $moyennefrancais = "Entre 10 et 12";
+        }
+
+        if ($moyennefrancais == "12-14") {
+            $moyennefrancais = "Entre 12 et 14";
+        }
+
+        if ($moyennefrancais == "14-16") {
+            $moyennefrancais = "Entre 14 et 16";
+        }
+
+        if ($moyennefrancais == "16-18") {
+            $moyennefrancais = "Entre 16 et 18";
+        }
+
+        if ($moyennefrancais == "18-20") {
+            $moyennefrancais = "Entre 18 et 20";
+        }
+
+        if ($moyenneanglais == "0-5") {
+            $moyenneanglais = "Entre 0 et 5";
+        }
+
+        if ($moyenneanglais == "5-8") {
+            $moyenneanglais = "Entre 5 et 8";
+        }
+
+        if ($moyenneanglais == "8-10") {
+            $moyenneanglais = "Entre 8 et 10";
+        }
+
+        if ($moyenneanglais == "10-12") {
+            $moyenneanglais = "Entre 10 et 12";
+        }
+
+        if ($moyenneanglais == "12-14") {
+            $moyenneanglais = "Entre 12 et 14";
+        }
+
+        if ($moyenneanglais == "14-16") {
+            $moyenneanglais = "Entre 14 et 16";
+        }
+
+        if ($moyenneanglais == "16-18") {
+            $moyenneanglais = "Entre 16 et 18";
+        }
+
+        if ($moyenneanglais == "18-20") {
+            $moyenneanglais = "Entre 18 et 20";
+        }
+
+        if ($moyennephilo == "0-5") {
+            $moyennephilo = "Entre 0 et 5";
+        }
+
+        if ($moyennephilo == "5-8") {
+            $moyennephilo = "Entre 5 et 8";
+        }
+
+        if ($moyennephilo == "8-10") {
+            $moyennephilo = "Entre 8 et 10";
+        }
+
+        if ($moyennephilo == "10-12") {
+            $moyennephilo = "Entre 10 et 12";
+        }
+
+        if ($moyennephilo == "12-14") {
+            $moyennephilo = "Entre 12 et 14";
+        }
+
+        if ($moyennephilo == "14-16") {
+            $moyennephilo = "Entre 14 et 16";
+        }
+
+        if ($moyennephilo == "16-18") {
+            $moyennephilo = "Entre 16 et 18";
+        }
+
+        if ($moyennephilo == "18-20") {
+            $moyennephilo = "Entre 18 et 20";
+        }
+       
+        
 		return view('mes-informations',[
             'specialite' => $spe,
             'profileleve' => $type,
             'matieresfav' => $matieresfav,
             'matieresdet' => $matieresdet,
             'methodes' => $methodes,
+            'maths' => $moyennemaths,
+            'physique' => $moyennephysique,
+            'svt' => $moyennesvt,
+            'si' => $moyennesi,
+            'eco' => $moyenneeco,
+            'francais' => $moyennefrancais,
+            'philosophie' => $moyennephilo,
+            'anglais' => $moyenneanglais,
         ]);
     }
     
@@ -311,14 +576,14 @@ class InformationsProfilController extends Controller
             'methodes' => ['required', 'string', 'max:255'],
             'matieresfav' => ['required', 'string', 'max:255'],
             'matieresdet' => ['required', 'string', 'max:255'],
-            'maths' => ['required', 'numeric'],
-            'physique' => ['required', 'numeric'],
-            'svt' => ['required', 'numeric'],
-            'si' => ['required', 'numeric'],
-            'eco' => ['required', 'numeric'],
-            'francais' => ['required', 'numeric'],
-            'philosophie' => ['required', 'numeric'],
-            'anglais' =>['required', 'numeric'],
+            'maths' => ['required', 'string', 'max:255'],
+            'physique' => ['required', 'string', 'max:255'],
+            'svt' => ['required', 'string', 'max:255'],
+            'si' => ['required', 'string', 'max:255'],
+            'eco' => ['required', 'string', 'max:255'],
+            'francais' => ['required', 'string', 'max:255'],
+            'philosophie' => ['required', 'string', 'max:255'],
+            'anglais' => ['required', 'string', 'max:255'],
         ]);
         
         $utilisateurs = Utilisateur::where('id', '=',Auth::user()->id)->first();

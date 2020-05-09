@@ -49574,6 +49574,8 @@ $(document).ready(function () {
       });
       $("#philosophie").change(function () {
         $("#champanglais").fadeIn("slow");
+      });
+      $("#anglais").change(function () {
         $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
@@ -49593,6 +49595,8 @@ $(document).ready(function () {
       });
       $("#philosophie").change(function () {
         $("#champanglais").fadeIn("slow");
+      });
+      $("#anglais").change(function () {
         $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
@@ -49612,6 +49616,8 @@ $(document).ready(function () {
       });
       $("#philosophie").change(function () {
         $("#champanglais").fadeIn("slow");
+      });
+      $("#anglais").change(function () {
         $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
@@ -49621,12 +49627,12 @@ $(document).ready(function () {
     if (specialite1 == "m_es_s") {
       $("#champmaths").fadeIn("slow");
       $("#maths").change(function () {
-        $("#champeco").fadeIn("slow");
-      });
-      $("#eco").change(function () {
         $("#champsvt").fadeIn("slow");
       });
       $("#svt").change(function () {
+        $("#champeco").fadeIn("slow");
+      });
+      $("#eco").change(function () {
         $("#champfrancais").fadeIn("slow");
       });
       $("#francais").change(function () {
@@ -49634,6 +49640,8 @@ $(document).ready(function () {
       });
       $("#philosophie").change(function () {
         $("#champanglais").fadeIn("slow");
+      });
+      $("#anglais").change(function () {
         $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
@@ -49643,12 +49651,12 @@ $(document).ready(function () {
     if (specialite1 == "m_es_p") {
       $("#champmaths").fadeIn("slow");
       $("#maths").change(function () {
-        $("#champeco").fadeIn("slow");
-      });
-      $("#eco").change(function () {
         $("#champphysique").fadeIn("slow");
       });
       $("#physique").change(function () {
+        $("#champeco").fadeIn("slow");
+      });
+      $("#eco").change(function () {
         $("#champfrancais").fadeIn("slow");
       });
       $("#francais").change(function () {
@@ -49656,6 +49664,8 @@ $(document).ready(function () {
       });
       $("#philosophie").change(function () {
         $("#champanglais").fadeIn("slow");
+      });
+      $("#anglais").change(function () {
         $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
@@ -49675,6 +49685,8 @@ $(document).ready(function () {
       });
       $("#philosophie").change(function () {
         $("#champanglais").fadeIn("slow");
+      });
+      $("#anglais").change(function () {
         $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
@@ -49694,6 +49706,8 @@ $(document).ready(function () {
       });
       $("#philosophie").change(function () {
         $("#champanglais").fadeIn("slow");
+      });
+      $("#anglais").change(function () {
         $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
@@ -49713,6 +49727,8 @@ $(document).ready(function () {
       });
       $("#philosophie").change(function () {
         $("#champanglais").fadeIn("slow");
+      });
+      $("#anglais").change(function () {
         $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
@@ -49722,15 +49738,15 @@ $(document).ready(function () {
     if (specialite1 == "m_p_si") {
       $("#champmaths").fadeIn("slow");
       $("#maths").change(function () {
-        $("#champeco").fadeIn("slow");
-      });
-      $("#eco").change(function () {
         $("#champphysique").fadeIn("slow");
       });
       $("#physique").change(function () {
         $("#champsi").fadeIn("slow");
       });
       $("#si").change(function () {
+        $("#champeco").fadeIn("slow");
+      });
+      $("#eco").change(function () {
         $("#champfrancais").fadeIn("slow");
       });
       $("#francais").change(function () {
@@ -49738,6 +49754,8 @@ $(document).ready(function () {
       });
       $("#philosophie").change(function () {
         $("#champanglais").fadeIn("slow");
+      });
+      $("#anglais").change(function () {
         $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
@@ -49760,6 +49778,8 @@ $(document).ready(function () {
       });
       $("#philosophie").change(function () {
         $("#champanglais").fadeIn("slow");
+      });
+      $("#anglais").change(function () {
         $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
@@ -49776,6 +49796,8 @@ $(document).ready(function () {
       });
       $("#philosophie").change(function () {
         $("#champanglais").fadeIn("slow");
+      });
+      $("#anglais").change(function () {
         $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
@@ -49792,6 +49814,8 @@ $(document).ready(function () {
       });
       $("#philosophie").change(function () {
         $("#champanglais").fadeIn("slow");
+      });
+      $("#anglais").change(function () {
         $("#champ_bouton_profil_1").fadeIn("slow");
       });
     }
@@ -49808,7 +49832,6 @@ $(document).ready(function () {
 
   if (specialite != "") {
     $("#champspe").attr("style", "display:yes");
-    $("#champ_bouton_profil_1").attr("style", "display:yes");
   }
 
   ;
@@ -49837,7 +49860,6 @@ $(document).ready(function () {
 
   if (tempstravailsemaine != "") {
     $("#champtempstravailsemaine").attr("style", "display:yes");
-    $("#champ_bouton_profil_1").attr("style", "display:yes");
   }
 
   ;
@@ -49887,7 +49909,6 @@ $(document).ready(function () {
 
   if (svt != "") {
     $("#champsvt").attr("style", "display:yes");
-    $("#champ_bouton_profil_1").attr("style", "display:yes");
   }
 
   ;
@@ -49916,6 +49937,7 @@ $(document).ready(function () {
 
   if (anglais != "") {
     $("#champanglais").attr("style", "display:yes");
+    $("#champ_bouton_profil_1").attr("style", "display:yes");
   }
 
   ;
@@ -49923,7 +49945,6 @@ $(document).ready(function () {
 
   if (philosophie != "") {
     $("#champphilosophie").attr("style", "display:yes");
-    $("#champ_bouton_profil_1").attr("style", "display:yes");
   }
 
   ;

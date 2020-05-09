@@ -248,7 +248,7 @@
          <div class="col-auto">
           <label for="maths">Ta moyenne en Maths</label>
           <select class="form-control @error('maths') is-invalid @enderror" id="maths" name="maths" value="{{ old('maths') }}">
-              <option value="{{ old('maths') }}">{{ old('maths') }}</option>
+              <option value="{{ old('maths') }}">{{ $maths }}</option>
               <option value="0-5">Entre 0 et 5</option>
               <option value="5-8">Entre 5 et 8</option>
               <option value="8-10">Entre 8 et 10</option>
@@ -270,7 +270,7 @@
          <div class="col-auto">
           <label for="physique">Ta moyenne en Physique</label>
           <select class="form-control @error('physique') is-invalid @enderror" value="{{ old('physique') }}" id="physique" name="physique">
-              <option value="{{ old('physique') }}">{{ old('physique') }}</option>
+              <option value="{{ old('physique') }}">{{ $physique }}</option>
               <option value="0-5">Entre 0 et 5</option>
               <option value="5-8">Entre 5 et 8</option>
               <option value="8-10">Entre 8 et 10</option>
@@ -292,7 +292,7 @@
          <div class="col-auto">
           <label for="svt">Ta moyenne en SVT</label>
           <select class="form-control @error('svt') is-invalid @enderror" value="{{ old('svt') }}" id="svt" name="svt">
-              <option value="{{ old('svt') }}">{{ old('svt') }}</option>
+              <option value="{{ old('svt') }}">{{ $svt }}</option>
               <option value="0-5">Entre 0 et 5</option>
               <option value="5-8">Entre 5 et 8</option>
               <option value="8-10">Entre 8 et 10</option>
@@ -314,7 +314,7 @@
          <div class="col-auto">
           <label for="si">Ta moyenne en SI</label>
           <select class="form-control @error('si') is-invalid @enderror" value="{{ old('si') }}" id="si" name="si">
-              <option value="{{ old('si') }}">{{ old('si') }}</option>
+              <option value="{{ old('si') }}">{{ $si }}</option>
               <option value="0-5">Entre 0 et 5</option>
               <option value="5-8">Entre 5 et 8</option>
               <option value="8-10">Entre 8 et 10</option>
@@ -336,7 +336,7 @@
          <div class="col-auto">
           <label for="eco">Ta moyenne en Economie</label> 
           <select class="form-control @error('eco') is-invalid @enderror" value="{{ old('eco') }}" id="eco" name="eco">
-              <option value="{{ old('eco') }}">{{ old('eco') }}</option>
+              <option value="{{ old('eco') }}">{{ $eco }}</option>
               <option value="0-5">Entre 0 et 5</option>
               <option value="5-8">Entre 5 et 8</option>
               <option value="8-10">Entre 8 et 10</option>
@@ -358,7 +358,7 @@
          <div class="col-auto">
           <label for="francais">Ta moyenne en Français</label>
           <select class="form-control @error('francais') is-invalid @enderror" value="{{ old('francais') }}" id="francais" name="francais">
-              <option value="{{ old('francais') }}">{{ old('francais') }}</option>
+              <option value="{{ old('francais') }}">{{ $francais }}</option>
               <option value="0-5">Entre 0 et 5</option>
               <option value="5-8">Entre 5 et 8</option>
               <option value="8-10">Entre 8 et 10</option>
@@ -380,7 +380,7 @@
          <div class="col-auto">
           <label for="philosophie">Ta moyenne en Philosophie</label>
           <select class="form-control @error('philosophie') is-invalid @enderror" id="philosophie" name="philosophie">
-              <option value="{{ old('philosophie') }}">{{ old('philosophie') }}</option>
+              <option value="{{ old('philosophie') }}">{{ $philosophie }}</option>
               <option value="0-5">Entre 0 et 5</option>
               <option value="5-8">Entre 5 et 8</option>
               <option value="8-10">Entre 8 et 10</option>
@@ -402,7 +402,7 @@
          <div class="col-auto">
           <label for="anglais">Ta moyenne en Anglais</label>
           <select class="form-control @error('anglais') is-invalid @enderror" id="anglais" name="anglais">
-              <option value="{{ old('anglais') }}">{{ old('anglais') }}</option>
+              <option value="{{ old('anglais') }}">{{ $anglais }}</option>
               <option value="0-5">Entre 0 et 5</option>
               <option value="5-8">Entre 5 et 8</option>
               <option value="8-10">Entre 8 et 10</option>

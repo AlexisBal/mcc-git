@@ -3,7 +3,7 @@
 @section('title', 'Inscription')
 
 @section('content')
-    <form action="/mes-informations" name="information_profil" method="post">
+    <form action="/mes-informations" name="information_profil" id="information_profil" method="post">
         @csrf
          
         <div class="form-group">

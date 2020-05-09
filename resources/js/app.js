@@ -58,18 +58,22 @@ $(document).ready(function(){
 
   $("#tempstravailsemaine").change(function(){
     $("#champtempstravailwe").fadeIn("slow");
+    window.scrollBy(0, 60);
   });
 
   $("#tempstravailwe").change(function(){
     $("#champmethodes").fadeIn("slow");
+    window.scrollBy(0, 60);
   });
 
   $("#methodes").change(function(){
     $("#champmatieresfav").fadeIn("slow");
+    window.scrollBy(0, 60);
   });
 
   $("#matieresfav").change(function(){
     $("#champmatieresdet").fadeIn("slow");
+    window.scrollBy(0, 100);
   });
   
   $("#matieresdet").change(function(){
@@ -178,6 +182,7 @@ $(document).ready(function(){
       $("#champmaths").fadeIn("slow");
 
       $("#maths").change(function(){
+        
         $("#champphysique").fadeIn("slow");
       });
 
@@ -356,26 +361,30 @@ $(document).ready(function(){
 
     if (specialite1 == "sp_h_es") {
       $("#champeco").fadeIn("slow");
+      window.scrollBy(0, 100);
 
       $("#eco").change(function(){
         $("#champfrancais").fadeIn("slow");
+        window.scrollBy(0, 100);
       });
 
       $("#francais").change(function(){
         $("#champphilosophie").fadeIn("slow");
+        window.scrollBy(0, 100);
       });
 
       $("#philosophie").change(function(){
         $("#champanglais").fadeIn("slow");
+        window.scrollBy(0, 100);
       });    
       
       $("#anglais").change(function(){
         $("#champ_bouton_profil_1").fadeIn("slow");
+        window.scrollBy(0, 100);
       });  
     };
   });
 });
-
 
 
 /** 

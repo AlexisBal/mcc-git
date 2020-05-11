@@ -40,15 +40,13 @@
                         <div class="main-header  header-sticky">
                             <div class="container-fluid">
                                 <div class="row align-items-center">
-
                                     <!-- Logo -->
-                                    <div class="col-xl-1 col-lg-1 col-md-1">
+                                    <div class="col-xl-1 col-lg-2 col-md-1">
                                         <div class="logo">
                                             <img src="{{ URL::to('images/Logo.png') }}" , class="img-fluid">
                                         </div>
                                     </div>
                                     <ul class="navbar-nav ml-auto">
-
                                         <!-- Authentication Links -->
                                         @guest
                                         <li class="nav-item">
@@ -93,32 +91,32 @@
 
 
         <!--Mask-->
-        <div class="jumbotron big-banner" style="height: 1000px; padding-top: 150px">
-            
-                <h1 class="display-4">Bienvenue sur My Course Choice !</h1>
-                <p class="lead">L'outil qui te permet de trouver l'école de tes rêves.</p>
-                <hr class="my-4">
-                <p>Mais comment cela fonctionne ?</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">En apprendre plus</a>
-          
+        <div class="jumbotron big-banner" style="height: 800px; padding-top: 150px">
 
+            <!-- <h1 class="display-4 color:black">Supenseigne</h1> -->
+
+
+            <div class="mask rgba-gradient align-items-center">
+                <!-- Content -->
+                <div class="container px-md-3 px-sm-0">
+                    <!--Grid row-->
+                    <div class="row wow fadeIn">
+                        <!--Grid column-->
+                        <div class="col-md-12 mb-4 white-text text-center wow fadeIn">
+                            <h3 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5">Supenseigne</h3>
+                            <hr class="hr-light my-4 w-75">
+                            <h4 class="subtext-header mt-2 mb-4">Trouve l'école qui te correspond</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
 
 
-
-
-
-
-        <main>
-
-
-
-
-
-        </main>
-    </div>
+                            </main>
+                        </div>
 </body>
 
 </html>

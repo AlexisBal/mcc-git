@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +19,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="css/welcome.css" rel="stylesheet">
 </head>
+
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -31,49 +34,50 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    
-                        <!-- Header Start -->
-                <div class="header-area">
+
+                    <!-- Header Start -->
+                    <div class="header-area">
                         <div class="main-header  header-sticky">
                             <div class="container-fluid">
                                 <div class="row align-items-center">
+
                                     <!-- Logo -->
-                                    <div class="col-xl-1 col-lg-2 col-md-1">
+                                    <div class="col-xl-1 col-lg-1 col-md-1">
                                         <div class="logo">
-                                            <img src="{{ URL::to('images/Logo.png') }}", class="img-fluid" >
+                                            <img src="{{ URL::to('images/Logo.png') }}" , class="img-fluid">
                                         </div>
                                     </div>
                                     <ul class="navbar-nav ml-auto">
-                                <!-- Authentication Links -->
-                                @guest
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                    </li>
-                                    @if (Route::has('register'))
+
+                                        <!-- Authentication Links -->
+                                        @guest
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                        </li>
+                                        @if (Route::has('register'))
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                         </li>
-                                    @endif
-                                @else
-                                    <li class="nav-item dropdown">
-                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                            {{ Auth::user()->name }} <span class="caret"></span>
-                                        </a>
-
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                            document.getElementById('logout-form').submit();">
-                                                {{ __('Logout') }}
+                                        @endif
+                                        @else
+                                        <li class="nav-item dropdown">
+                                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                {{ Auth::user()->name }} <span class="caret"></span>
                                             </a>
 
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                @csrf
-                                            </form>
-                                        </div>
-                                    </li>
-                                @endguest
-                            </ul>
+                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                            document.getElementById('logout-form').submit();">
+                                                    {{ __('Logout') }}
+                                                </a>
+
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+                                            </div>
+                                        </li>
+                                        @endguest
+                                    </ul>
                                     <!-- Mobile Menu -->
                                     <div class="col-12">
                                         <div class="mobile_menu d-block d-lg-none"></div>
@@ -81,27 +85,40 @@
                                 </div>
                             </div>
                         </div>
-                </div>
-                <!-- Header End -->
-            </header>                     
-                                        
+                    </div>
+                    <!-- Header End -->
+                    </header>
+
         </nav>
 
-        <main class="py-4">
-            <img src="{{ URL::to('images/Background.jpg') }}">
-    
+
+        <!--Mask-->
+        <div class="jumbotron big-banner" style="height: 1000px; padding-top: 150px">
             <div class="jumbotron">
                 <h1 class="display-4">Bienvenue sur My Course Choice !</h1>
                 <p class="lead">L'outil qui te permet de trouver l'école de tes rêves.</p>
                 <hr class="my-4">
                 <p>Mais comment cela fonctionne ?</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">En apprendre plus</a>
+                <a class="btn btn-primary btn-lg" href="#" role="button">En apprendre plus</a>
             </div>
 
-    
-            </main>
+        </div>
+
+
+
+
+
+
+
+
+        <main>
+
+
+
+
+
+        </main>
     </div>
 </body>
+
 </html>
-
-
